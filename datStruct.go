@@ -18,3 +18,5 @@ func main(){
     // make(map[key-type]value-type)
     //map2 := make(map[string]int)
 }
+
+

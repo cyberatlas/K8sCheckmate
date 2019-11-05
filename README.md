@@ -6,3 +6,5 @@ Need to install:
 - helm 
 - tiller
 - minkube / kubernetes
+- Virtualbox (to run minikube)
+- Docker
