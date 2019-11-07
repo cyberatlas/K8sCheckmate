@@ -71,6 +71,7 @@ inv subtaks
 - [ ] Something to create and store the parsed security policies/rules
 - [ ] Parse helm charts and store fields with multiple values in the datastructures
 - [ ] Look into storing all values as strings in the hashmaps or having a hashmap for list of string and another for list of ints is worth
+- [ ] Research the best way to set up a go project and restructure the project accordingly
 
 
 
