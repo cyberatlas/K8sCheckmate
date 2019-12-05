@@ -41,6 +41,7 @@ Team:
 This next week our goal is to discuss diferent data structures for our project. Also our goal is to keep up the constant researching and experimenting with the languages that we are using
 
 Contributions
+
 | Team Member    | Contributions                                      |
 | -------------- | ---------------------------------------------------|
 | Alex Stevenson | Communicated with Julie about deadlines            |
