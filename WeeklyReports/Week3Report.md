@@ -39,3 +39,12 @@ Team:
 > 
 
 This next week our goal is to discuss diferent data structures for our project. Also our goal is to keep up the constant researching and experimenting with the languages that we are using
+
+Contributions
+| Team Member | Contributions |
+| -------------- | ----------------------- |
+| Alex Stevenson | Communicated with Julie about deadlines            |
+| Daniel Brink | Kept team up to date on assignments and researched |
+| Jacob Cram | Worked with testing for Go |
+| Sean Sailer | Worked with different possible ways of GUI |
+| John Young | Worked with Sean on different possible ways of GUI |
