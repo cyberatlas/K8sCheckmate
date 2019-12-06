@@ -29,6 +29,7 @@ func main() {
 	filename := os.Args[1]
 	var config Config
 	source, err := ioutil.ReadFile(filename)
+
 	if err != nil {
 		panic(err)
 	}
@@ -46,9 +47,10 @@ func main() {
 
 	// fmt.Printf("Value: %#v\n", config.Bar[0])
 	// Printing the values we greabbed
-	fmt.Println(config.Service.Port, config.Service.Type, config.Image.Tag)
+    fmt.Println("service : port : image")
+	fmt.Println(config.Service.Type, config.Service.Port, config.Image.Tag)
 
-	//    fmt.Print( config2)
+	fmt.Println(config)
 
 	// This is to print when we grab everything from the map
 	/*
