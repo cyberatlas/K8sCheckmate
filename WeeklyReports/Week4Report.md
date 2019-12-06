@@ -38,6 +38,7 @@ Created doc to track licensing and notes
 This next week our goal is to start setting up minikube and working with Helm charts. Also start working with parsing.
 
 Contributions
+
 | Team Member | Contributions |
 | -------------- | ----------------------- |
 | Alex Stevenson | Stevenson dealt with effieciency issues for data stuctures            |
