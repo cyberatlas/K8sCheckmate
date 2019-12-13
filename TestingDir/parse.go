@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"sigs.k8s.io/yaml"
+	// "sigs.k8s.io/yaml"
+    "gopkg.in/yaml.v2"
 )
 
 // Struct used for testing
@@ -24,6 +25,14 @@ type Config struct {
 		Tag string
 	}
 }
+
+
+func checkNumPorts(){
+
+
+
+}
+
 
 func main() {
 	filename := os.Args[1]
@@ -57,5 +66,17 @@ func main() {
 	        fmt.Printf("%s: %s \n\n", v1, v2)
 	    }
 	*/
+
+    // Trying another method
+     m := make(map[interface{}]interface{})
+        err = yaml.Unmarshal([]byte(source), &m)
+        if err != nil {
+                // log.Fatalf("error: %v", err)
+                fmt.Printf("error: %v", err)
+        }
+        fmt.Printf("--- m:\n%v\n\n", m)
+        for k, v := range m {
+            fmt.Println("k:", k, "v:", v)
+        }
 
 }
