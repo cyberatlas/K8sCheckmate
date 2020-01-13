@@ -20,7 +20,7 @@
 
 
 
-#####Week 2 Accomplishments
+##### Accomplishments
 
 Team: 
 
@@ -36,3 +36,20 @@ Team:
 >
 > Regarding the work done for the project, our team is still working on getting an adequate understanding of the tools , so that we do not need to start over after realizing any poor architecture decisions.
 
+
+
+Contributions
+
+| Team Member    | Contribution                                                 |
+| -------------- | ------------------------------------------------------------ |
+| Alex Stevenson | Continues to hold team accountable on necessary tasks that need finishing. Also communicating with our advisor and director. |
+| Daniel Brink   | Continues to keep report for our team and keep our team up to date on every accomplishment that was made. |
+| Jacob Cram     | Continues to research the different ways of testing in Go and also other containerized environment |
+| Sean Sailer    | Research more of syntax for Go                               |
+| John Young     | Research more of syntax for Go                               |
+
+Future Plans: 
+
+* Keep up with research
+* Finish turning in forms/documents
+* Test sketch our prototypes 
