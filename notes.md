@@ -57,22 +57,26 @@ Worth taking a look at [Kubernetes-sigs/yaml](https://github.com/kubernetes-sig/
 
 Due:
 ---
-- [ ] Weekly reports - backdate them
-- [ ] Start working on the presentation
-- [ ] Get POC working
-- [ ] Meet w/ Julie 1 more time
-- [ ] Do stuff with Design doc
-- [ ] Work on the youtube video
+- [x] Weekly reports - backdate them
+- [x] Start working on the presentation
+- [x] Get POC working
+- [x] Meet w/ Julie 1 more time
+- [x] Do stuff with Design doc
+- [x] Work on the youtube video
 
 inv subtaks
 
-- [ ] Understand exactly how helm charts work - Everyone
+- [ ] Understand exactly how helm charts work - Everyone sotres the 
 - [ ] Parse rules 
 - [ ] Something to create and store the parsed security policies/rules
 - [ ] Parse helm charts and store fields with multiple values in the datastructures
 - [ ] Look into storing all values as strings in the hashmaps or having a hashmap for list of string and another for list of ints is worth
 - [ ] Research the best way to set up a go project and restructure the project accordingly
 
+
+13 Jan
+---
+- `values.yaml` stores the values used in the chart, but can also be defined by the users when they run the cluster
 
 
 

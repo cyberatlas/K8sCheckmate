@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	// "sigs.k8s.io/yaml"
-    "gopkg.in/yaml.v2"
+	"sigs.k8s.io/yaml"
+    //"gopkg.in/yaml.v2"
 
 	"github.com/pkg/errors"
-	"sigs.k8s.io/yaml"
+//	"sigs.k8s.io/yaml"
 )
 
 // Struct used for testing
@@ -78,6 +78,9 @@ func main() {
 			}
 	*/
 
+    /**
+    //This only works with yaml v2 for some reason
+
     // Trying another method
      m := make(map[interface{}]interface{})
         err = yaml.Unmarshal([]byte(source), &m)
@@ -90,6 +93,7 @@ func main() {
             fmt.Println("k:", k, "v:", v)
         }
 
+        **/
 }
 func (c *Config) Parse(data []byte) error {
 	if err := yaml.Unmarshal(data, c); err != nil {
