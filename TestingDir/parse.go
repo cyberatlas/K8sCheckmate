@@ -1,14 +1,14 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"os"
-	"sigs.k8s.io/yaml"
-    //"gopkg.in/yaml.v2"
 
-	"github.com/pkg/errors"
-//	"sigs.k8s.io/yaml"
+	"sigs.k8s.io/yaml"
+	//"gopkg.in/yaml.v2"
+	//	"sigs.k8s.io/yaml"
 )
 
 // Struct used for testing
@@ -18,7 +18,7 @@ type Config struct {
     Bar []string
 }
 */
-
+/**
 type Config struct {
 	Service struct {
 		Type string
@@ -27,21 +27,55 @@ type Config struct {
 	Image struct {
 		Tag string
 	}
+}**/
+
+func convert(i interface{}) interface{} {
+	switch x := i.(type) {
+	case map[interface{}]interface{}:
+		m2 := map[string]interface{}{}
+		for k, v := range x {
+			m2[k.(string)] = convert(v)
+		}
+		return m2
+	case []interface{}:
+		for i, v := range x {
+			x[i] = convert(v)
+		}
+	}
+	return i
 }
-
-
-func checkNumPorts(){
-
-
-
-}
-
 
 func main() {
 	filename := os.Args[1]
-	var config Config
+	//var config Config
+
 	source, err := ioutil.ReadFile(filename)
 
+	fmt.Printf("Input: %s\n", source)
+	var body interface{}
+
+	if err != nil {
+		panic(err)
+	}
+
+	if err := yaml.Unmarshal(source, &body); err != nil {
+		panic(err)
+	}
+
+	body = convert(body)
+
+	if b, err := json.Marshal(body); err != nil {
+		panic(err)
+	} else {
+		//fmt.Printf("Output: %s\n", b)
+		fmt.Printf("Output: %s\n", b)
+	}
+
+	if err != nil {
+		panic(err)
+	}
+
+	/**
 	if err != nil {
 		panic(err)
 	}
@@ -69,6 +103,7 @@ func main() {
 
 	fmt.Println(config)
 	fmt.Printf("%+v\n", config)
+	**/
 
 	// This is to print when we grab everything from the map
 	/*
@@ -78,24 +113,25 @@ func main() {
 			}
 	*/
 
-    /**
-    //This only works with yaml v2 for some reason
+	/**
+	  //This only works with yaml v2 for some reason
 
-    // Trying another method
-     m := make(map[interface{}]interface{})
-        err = yaml.Unmarshal([]byte(source), &m)
-        if err != nil {
-                // log.Fatalf("error: %v", err)
-                fmt.Printf("error: %v", err)
-        }
-        fmt.Printf("--- m:\n%v\n\n", m)
-        for k, v := range m {
-            fmt.Println("k:", k, "v:", v)
-        }
+	  // Trying another method
+	   m := make(map[interface{}]interface{})
+	      err = yaml.Unmarshal([]byte(source), &m)
+	      if err != nil {
+	              // log.Fatalf("error: %v", err)
+	              fmt.Printf("error: %v", err)
+	      }
+	      fmt.Printf("--- m:\n%v\n\n", m)
+	      for k, v := range m {
+	          fmt.Println("k:", k, "v:", v)
+	      }
 
-        **/
+	      **/
 }
-func (c *Config) Parse(data []byte) error {
+
+/**func (c *Config) Parse(data []byte) error {
 	if err := yaml.Unmarshal(data, c); err != nil {
 		return err
 	}
@@ -104,4 +140,4 @@ func (c *Config) Parse(data []byte) error {
 	}
 	// ... same check for Username, SSHKey, and Port ...
 	return nil
-}
+}**/
