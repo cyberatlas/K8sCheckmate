@@ -58,6 +58,12 @@ Once this is done we will need to:
 - [] Figure out what to put in the policy files
 - [] Figure out where users on the pods are defined
 
+Alternative Idea
+---
+Alex is looking to see if there are any alternatives that might be make what we are doing easier. Playing with that in the `pyTest` branch.  
+
+- [] Talk to Eric and get approval to make the switch if needed. 
+
 # Tracking Work 
 
 In `thingsWeveDone.md` write your name, date, and what you did. 
@@ -69,4 +75,5 @@ This greatly simplifies the creation of biweekly reports, tracking progress, and
 - Ensure that things aren't being run as root by default
 - Allow a max number of open ports on the cluster
 - Ban certain ports from being used
+- Check the image being used and make sure it is one of the approved images
 
