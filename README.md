@@ -48,8 +48,9 @@ We have 3 options to explore in regards to how we are getting the values
 We will need to weigh the pros and cons of each method and decide which to use moving forward. 
 Once this is done we will need to:
 
+- [] Figure out if the values must be saved to `values.yaml` or if they can be defined where they are used in the charts. If the latter is true, we will need to find a way to check all of the possible places they can be
 - [] Find a way to parse the values from any subcharts
-- [] Figure out how templates play into this
+- [] Figure out how templates play into this. Do we rerun the check on the templates? Do we have a list of allowed templates? How should go about dealing with them in a way that allows maximum flexibility to the end user?
 - [] Explore how we can utilize templates
 - [] Parse a `policy.yaml` file and store the values
 - [] Write methods to check the values from the policy against the chart
