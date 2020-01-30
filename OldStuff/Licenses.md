@@ -3,4 +3,4 @@
 
 | Dependency | License | Link |
 | :--- | :---:  | :---:|
-| |  | |
+| Kubernetes-sigs/yaml | MIT License | https://github.com/kubernetes-sigs/yaml/blob/master/LICENSE |
