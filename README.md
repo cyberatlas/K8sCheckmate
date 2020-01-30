@@ -48,14 +48,21 @@ We have 3 options to explore in regards to how we are getting the values
 We will need to weigh the pros and cons of each method and decide which to use moving forward. 
 Once this is done we will need to:
 
+- [] Figure out if the values must be saved to `values.yaml` or if they can be defined where they are used in the charts. If the latter is true, we will need to find a way to check all of the possible places they can be
 - [] Find a way to parse the values from any subcharts
-- [] Figure out how templates play into this
+- [] Figure out how templates play into this. Do we rerun the check on the templates? Do we have a list of allowed templates? How should go about dealing with them in a way that allows maximum flexibility to the end user?
 - [] Explore how we can utilize templates
 - [] Parse a `policy.yaml` file and store the values
 - [] Write methods to check the values from the policy against the chart
 - [] Alert on any misconfigurations
 - [] Figure out what to put in the policy files
 - [] Figure out where users on the pods are defined
+
+Alternative Idea
+---
+Alex is looking to see if there are any alternatives that might be make what we are doing easier. Playing with that in the `pyTest` branch.  
+
+- [] Talk to Eric and get approval to make the switch if needed. 
 
 # Tracking Work 
 
@@ -68,4 +75,5 @@ This greatly simplifies the creation of biweekly reports, tracking progress, and
 - Ensure that things aren't being run as root by default
 - Allow a max number of open ports on the cluster
 - Ban certain ports from being used
+- Check the image being used and make sure it is one of the approved images
 
