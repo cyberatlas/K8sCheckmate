@@ -12,3 +12,5 @@
 27 Jan - 2 Feb
 ====
 - Alex (27 Jan) [5 hours] - Was having an issue saving YAML files in a map so explored the idea of how to do it in Python. Made a new branch for that as it's only to see if that will be able to be used just in case it's needed. Currently it loads the yaml file, saves it to a map, then prints out the map. 
+- Daniel (1 Feb) [2 hours] - Spent time setting up and re-familiarizing self with Python and PyTest.
+- Daniel (2 Feb) [2 hours] - Set up a very basic logic checking function.  As of writing, unfinished with no testing.
