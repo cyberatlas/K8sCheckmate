@@ -1,7 +1,7 @@
 import yaml
 import argparse
 
-def get_yaml(values_file) -> values_dict:
+def get_yaml(values_file):
     """get_yaml
 
     :param values_file:
@@ -37,3 +37,4 @@ def main():
 main()
 
 
+##To run from main project directory use ~ python Project/HelmParse/helmparse.py Project/TestCharts/hello-world/values.yaml
