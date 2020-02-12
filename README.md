@@ -5,7 +5,10 @@ Install Python 3.7
 Install pyenv and virtualenv 
 
 - [] Add the instructions for pyenv - **Alex**
-- [] Make a requirements.txt
+- [x] Make a requirements.txt
+> Made this in the main project folder.
+This is the standard way to do things for projects like this. 
+Alternatively, there is the option of having requirements.txt for each aspect of the project and have the main requirements.txt 
 
 # Things to work on/Timeline
 
