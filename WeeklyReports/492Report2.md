@@ -65,4 +65,4 @@ Team Member Contribution Weekly
 - John will work on implementing logic for checking and testing phase one and two
 - Jacob will  FIX FIX FIX FIX
 - Sean will finish setting up PyUnit and ensure all existing logic files have adequate test code coverage. Additionally, will help John on implementing logic for phase one and two.
-- Daniel will  FIX FIX FIX FIX
+- Daniel will work on value checking, testing and ensuring it functions properly with the types of data it needs to for phase three while keeping the team aware of commitments.
