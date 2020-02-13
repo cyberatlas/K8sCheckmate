@@ -34,20 +34,19 @@ Team Member Contribution Weekly
 - John (12 Feb) [2 hours] - Looked at some examples of security checking policies online to get a better understanding on what a typical security protocol follows. Talked to Stevenson about whether or not to use online examples or security policies from Workiva's Helm charts.
 - John (13 Feb) [5 hours] - Made some tests for checking the security policy based off the research I did.
 - Jacob (13 Feb) [2 hours] - Worked on some adaptations to the first iteration of our helmparse that Alex originally created as a proof of concept. 
-
+- Alex Stevenson (11 Feb - 13 Feb) [7 hours] - Met with Eric, asked about charts to use to for testing and discussed checking image versions. 
+Added policy parsing.
+Policy files are able to be parsed and stored in dictionaries. Worked on try to integrate the different parts. 
+Added a requirements.txt. 
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | 5  | 17  |
+| Alex Stevenson  | 10  | 24  |
 | Daniel Brink  | 8  | 12  |
 | Jacob Cram  | 9  |  17 |
 | Sean Sailer  | 6  | 10  |
 | John Young  | 11  | 19 |
-
-
-
-
 
 
 ### Plans for Coming Week
@@ -62,8 +61,10 @@ Team Member Contribution Weekly
 - [] Figure out what to put in the policy files
 - [] Figure out where users on the pods are defined
 
+### Tasks 
 
-- Alex Stevenson is going to work on Phase 3 FIX FIX FIX FIX
+- Alex Stevenson is going to work on Phase 3, particularly the integration of the different parts.
+Going to try to have everything neded for the minimal viable product by the end of next week.
 - John will work on implementing logic for checking and testing phase one and two
 - Jacob will keep adapting the helmparse to better suit our needs and fit with Python best practice. Then work with the information that John and Daniel find about security issues and implement them into our system.
 - Sean will finish setting up PyUnit and ensure all existing logic files have adequate test code coverage. Additionally, will help John on implementing logic for phase one and two.
