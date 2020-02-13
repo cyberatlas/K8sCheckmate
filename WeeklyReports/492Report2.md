@@ -1,6 +1,6 @@
 ﻿# SE 492 – sdmay20-58
 # K8s Checkmate
-# Week 1 Report (1/13 – 1/27)
+# Week 2 Report (1/27 – 2/13)
 ###### Client: Workiva
 ###### Faculty Advisor: Julie Rursch
 ###### Team Members:
@@ -17,26 +17,31 @@
 Team Member Contribution Weekly
 
 
-#### 13 Jan - 19 Jan
-- Alex (13 Jan) - Researched locations of values, merged branches, cleaned up the POC, discussed issues/possible ways to move forward, and tried to improve our organization/communication
-- Jacob (13 Jan) - Researched ways to better parse values, raised concerns with John and Alex, discussed ways to improve our organization/communication
-- John (13 Jan) - Worked on organizing team meetings, collected availabilities, and met with Jacob and Alex to discuss issues and possible solutions to improve organization/communication
+#### 27 Jan - 5 Feb
+- Alex (27 Jan) [5 hours] - Was having an issue saving YAML files in a map so explored the idea of how to do it in Python. Made a new branch for that as it's only to see if that will be able to be used just in case it's needed. Currently it loads the yaml file, saves it to a map, then prints out the map. 
+- John (27 Jan) [4 hours] - Was looking into a solution that Jacob found that would parse helm charts with GO with having a generic type. I found that this solution would put the helm chart into a JSON file of strings. Worked with this route a little and realized it work, but forcing the code to work because of GO's limitations was causing some issues. Communicated with the team though and we decided that Python would be the better/easier option.
+- Sean (30 Jan) [3 hours] - Researched the different python testing frameworks, and decided on which one best fits our needs and use cases
+- Daniel (1 Feb) [2 hours] - Spent time setting up and re-familiarizing self with Python and PyTest.
+- Daniel (2 Feb) [3 hours] - Set up a very basic logic checking function.  As of writing, works with test keys and values, but does not work with checking images.  Inital tests show correct behavior.
 
 
-#### 20 Jan - 26 Jan
-- John and Jacob (20 Jan) Talked about having a set of the overall basic struct for our security checker. We’re still working out the issues on how to make our struct more generic
-- Sean researched different golang open-source libraries that provided YAML and JSON support for different loading, parsing, and storing functionality. Additionally researched the implementation specifics in other languages.
-- Daniel Brink (20 Jan) Worked on keeping our group up to date with the team meetings with the Progress Update
+
+
+#### 6 Feb - 13 Feb
+- Sean (6 Feb) [3 hours] - Began setting up PyUnit test framework in our project allowing for automated testing of logic files. Additionally, began structuring tests for parsing data and storing it correctly
+- Daniel (9 Feb) [3 hours] - Studying and comparing online examples of helm charts to better comprehend what this project would be handling.
+- John (12 Feb) [2 hours] - Looked at some examples of security checking policies online to get a better understanding on what a typical security protocol follows. Talked to Stevenson about whether or not to use online examples or security policies from Workiva's Helm charts.
+- John (13 Feb) [5 hours] - Made some tests for checking the security policy based off the research I did.
 
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | 12  | 12  |
-| Daniel Brink  | 4  | 4  |
-| Jacob Cram  | 8  |  8 |
-| Sean Sailer  | 4  | 4  |
-| John Young  | 8  | 8 |
+| Alex Stevenson  | 5  | 17  |
+| Daniel Brink  | 8  | 12  |
+| Jacob Cram  | 0  |  8 |
+| Sean Sailer  | 6  | 10  |
+| John Young  | 11  | 19 |
 
 
 
@@ -45,13 +50,6 @@ Team Member Contribution Weekly
 
 ### Plans for Coming Week
 ---
-- [] Explore saving the values directly to a map or to our data structure `map[string][]string{}`
-- [] Explore extracting everything using structs that contain every possible value, after which the fields without values are automatically left out.
-- [] Explore what Helm and Kubernetes use to get the values and store them
-We will need to weigh the pros and cons of each method and decide which to use moving forward. 
-Once this is done we will need to:
-
-
 - [] Figure out if the values must be saved to `values.yaml` or if they can be defined where they are used in the charts. If the latter is true, we will need to find a way to check all of the possible places they can be
 - [] Find a way to parse the values from any sub-charts
 - [] Figure out how templates play into this. Do we rerun the check on the templates? Do we have a list of allowed templates? How should go about dealing with them in a way that allows maximum flexibility to the end-user?
@@ -63,8 +61,8 @@ Once this is done we will need to:
 - [] Figure out where users on the pods are defined
 
 
-- Alex Stevenson is going to talk to Workiva about potentially including some python into this project
-- John will work on setting up a Kubernetes cluster
-- Jacob will continue to work on getting our JSON object to represent a map
-- Sean will continue looking at libraries and looking at other languages and writing tests for our charts to ensure we are properly parsing and storing as they should be.
-- Daniel will continue to manage how much progress our team has made
+- Alex Stevenson is going to work on Phase 3 FIX FIX FIX FIX
+- John will work on implementing logic for checking and testing phase one and two
+- Jacob will  FIX FIX FIX FIX
+- Sean will FIX FIX FIX FIX
+- Daniel will  FIX FIX FIX FIX
