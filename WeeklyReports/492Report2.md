@@ -64,5 +64,5 @@ Team Member Contribution Weekly
 - Alex Stevenson is going to work on Phase 3 FIX FIX FIX FIX
 - John will work on implementing logic for checking and testing phase one and two
 - Jacob will  FIX FIX FIX FIX
-- Sean will FIX FIX FIX FIX
+- Sean will finish setting up PyUnit and ensure all existing logic files have adequate test code coverage. Additionally, will help John on implementing logic for phase one and two.
 - Daniel will  FIX FIX FIX FIX
