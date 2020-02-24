@@ -1,0 +1,15 @@
+root: true
+replicaCountPolicy: 1
+restartPolicy: Never
+sleepTimePolicy: "10"
+numberOfImagesPolicy: 1
+servicePolicy:
+    annotations: none
+    clusterIP: none
+    externalIPs: none
+    loadBalancerIP: none
+    loadBalancerSourceRanges: none
+    type: ClusterIP
+    portStart: 21
+    portEnd: 9000
+    nodePort: tcp
