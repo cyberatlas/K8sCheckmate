@@ -1,20 +1,16 @@
 import json
 
 #Several assumptions that may very well be wrong:
-#	Values are passed as a dictionary
-#	Policies are passed as a JSON string
+#	Values and Policies are passed as dictionaries
 #	Ports have the key "port"
 
-def check(values_dict, policy_json):
+def check(values_dict, policy_dict):
 	
 	#Get a list of used ports
 	portList = port_search(values_dict)
 	
 	#Mainly for testing
 	numWrong = 0
-	
-	#Convert from JSON string to Dictionary
-	policy_dict = json.loads(policy_json)
 	
 	#Iterate through policies we want to check
 	for key in policy_dict:
@@ -23,7 +19,7 @@ def check(values_dict, policy_json):
 		#Depends on policy
 		
 		#Maximum Number of Ports - int
-		if key == "MAX_PORTS":			
+		if key == "max_open_ports":			
 			
 			if len(portList) > policy_dict[key]:
 			
@@ -35,7 +31,7 @@ def check(values_dict, policy_json):
 		
 		
 		#Banned Ports - list of ints
-		elif key == "BANNED_PORTS":
+		elif key == "banned_ports":
 			for port in policy_dict[key]:
 				if port in portList:
 				
@@ -47,7 +43,7 @@ def check(values_dict, policy_json):
 		
 		
 		#Allowed Ports - list of ints
-		elif key == "ALLOWED_PORTS":
+		elif key == "allowed_ports":
 			for port in portList:
 				if port not in policy_dict[key]:
 				
@@ -59,16 +55,15 @@ def check(values_dict, policy_json):
 		
 		
 		#No Root - Boolean
-#		elif key == "NO_ROOT":
-		#TODO:  Figure out how this works
-
-#			if values_dict[key] != policy_dict[key]:
-#				
-#				numWrong += 1
-#				
-#				print("Bad - No Root is not " + policy_dict[key])
-#			else:
-#				print("Good - No Root matches policy")
+		elif key == "NO_ROOT":
+		#TODO:  Figure out exactly how this works
+			if values_dict["securityContext"]["runAsNonRoot"] != policy_dict[key]:
+				
+				numWrong += 1
+				
+				print("Bad - No Root is not " + str(policy_dict[key]))
+			else:
+				print("Good - No Root matches policy")
 		
 		
 		#Check Outside Images - Boolean

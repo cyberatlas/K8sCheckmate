@@ -23,9 +23,15 @@ test_values_4 = {
 	"test3": {"port": 8 },
 }
 
-test_policy_1 = '{ "MAX_PORTS":3, "ALLOWED_PORTS":[80,1,2,3,4]}'
+test_policy_1 = { 
+	"max_open_ports":3, 
+	"allowed_ports":[80,1,2,3,4]
+}
 
-test_policy_2 = '{ "MAX_PORTS":5, "BANNED_PORTS":[81]}'
+test_policy_2 = { 
+	"max_open_ports":5, 
+	"banned_ports":[81]
+}
 
 
 def test_1_1():
@@ -52,3 +58,15 @@ def test_3_2():
 
 def test_4_2():
 	assert valueCheck.check(test_values_4, test_policy_2) == 0
+
+
+test_values_rootTest = {
+	"securityContext": {"runAsNonRoot": True },
+}
+
+test_policy_rootTest = {
+	"NO_ROOT": False
+}
+
+def test_rootTest():
+	assert valueCheck.check(test_values_rootTest, test_policy_rootTest) == 1

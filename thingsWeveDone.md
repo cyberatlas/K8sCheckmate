@@ -20,3 +20,9 @@
 - John (12 Feb) [2 hours] - Looked at some examples of security checking policies online to get a better understanding on what a typical security protocol follows. Talked to Stevenson about whether or not to use online examples or security policies from Workiva's Helm charts.
 - John (13 Feb) [5 hours] - Made some tests for checking the security policy based off the research I did.
 - Sean (6 Feb) [3 hours] - Began setting up PyUnit test framework in our project allowing for automated testing of logic files. Additionally, began structuring tests for parsing data and storing it correctly
+
+14 Feb - 27 Feb
+===
+Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
+Daniel (23 Feb) [4 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
+Daniel (24 Feb) [3 hours] - Set up the outline of the Peer Review document and began filling it out.
