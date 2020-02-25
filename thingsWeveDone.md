@@ -26,3 +26,5 @@
 - Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
 - Daniel (23 Feb) [4 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
 - Daniel (24 Feb) [3 hours] - Set up the outline of the Peer Review document and began filling it out.
+- Alex (24 Feb) [1.5 hours] - Worked on testing values in the chart, changed helmparse to be a module so it can be imported, looked a bit into how to search the key in nested dictionary. 
+Going to try to look into flattening or recursively searching.

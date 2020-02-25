@@ -51,7 +51,8 @@ def main():
         print(yaml.dump(data))
     """
 
-main()
+if __name__ == "__main__":
+    main()
 
 
 ##To run from main project directory use ~ python Project/HelmParse/helmparse.py Project/TestCharts/hello-world/values.yaml
