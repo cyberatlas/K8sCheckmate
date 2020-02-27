@@ -57,5 +57,5 @@ Team Member Contribution Weekly
 - Alex Stevenson 
 - John 
 - Jacob 
-- Sean 
+- Sean is going to help finish phase 1 and 2, and implement robust test code using the configured charts and YAML recently added to the repository. Additionally, will work with others on Saturday to get a fleshed-out POC to be tested by end-users next week
 - Daniel will continue working on value checking, keeping it updated such that it works when integrated into the greater program, as well as testing it sufficiently.  In addition, will spend time working on the Peer Review presentation.
