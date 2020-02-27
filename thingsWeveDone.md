@@ -28,7 +28,8 @@
 - Daniel (24 Feb) [4 hours] - Set up the outline of the Peer Review document and began filling it out.
 - Alex (24 Feb) [2 hours] - Worked on testing values in the chart, changed helmparse to be a module so it can be imported, looked a bit into how to search the key in nested dictionary. 
 Going to look into recursively searching.
-- Alex (27 Feb) [1 hour] - Merged branches, made necessary modules.
+- Alex (27 Feb) [3 hours] - Merged branches, made necessary modules.
 Code runs in pycharm but not the terminal, debugging the issue.
 Says project is not a module, but I have made it one, tried to run as a module and add to the python path, but it did not like that.
-
+Got a hacky MVP create in StevensonTesting.py that works on max open ports and banned ports.
+Went to meeting with advisor.
