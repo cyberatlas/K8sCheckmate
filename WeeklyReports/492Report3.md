@@ -19,12 +19,16 @@ Team Member Contribution Weekly
 
 #### 14 Feb - 20 Feb
 - Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
+- Sean (18 Feb) [2 hours] - Familiarized myself with PyUnit tesitng framework by writing example test code.
+- Sean (19 Feb) [1 hour] - Worked on dictionary iteration
 
 
 
 #### 21 Feb - 27 Feb
 - Daniel (23 Feb) [5 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
 - Daniel (24 Feb) [4 hours] - Set up the outline of the Peer Review document and began filling it out.
+- Sean (22 Feb) [3 hours] - Worked on finding robust test configurations and writing test code using hte test files
+- Sean (27 Feb) [2 hours] - Talked with Alex about recursive roadblock, helped implement a solution that recursively iterates nested dictionaries
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
