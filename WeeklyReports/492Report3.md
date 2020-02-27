@@ -23,6 +23,7 @@ Team Member Contribution Weekly
 - Sean (18 Feb) [2 hours] - Familiarized myself with PyUnit tesitng framework by writing example test code.
 - John (19 Feb) [4 hours ] - Setting up architecture for testing IBM example values.yaml with a Policy file
 - Sean (19 Feb) [1 hour] - Worked on dictionary iteration
+- Alex (27 Jan) [5 hours] - Was having an issue saving YAML files in a map so explored the idea of how to do it in Python. Made a new branch for that as it's only to see if that will be able to be used just in case it's needed. Currently it loads the yaml file, saves it to a map, then prints out the map.
 
 
 
@@ -34,11 +35,14 @@ Team Member Contribution Weekly
 - Sean (22 Feb) [3 hours] - Worked on finding robust test configurations and writing test code using hte test files
 - Sean (27 Feb) [2 hours] - Talked with Alex about recursive roadblock, helped implement a solution that recursively iterates nested dictionaries
 - John (24 Feb) [4 hours ] - Testing in Python for IBM policies and planning out architecture with Alex and Jacob for utulizing dictionaries from the parsing
+- Alex (24 Feb) [2.5 hours] - Worked on testing values in the chart, changed helmparse to be a module so it can be imported, looked a bit into how to search the key in nested dictionary. Going to look into recursively searching.
+- Alex (27 Feb) [3 hours] - Merged branches, made necessary modules. Code runs in pycharm but not the terminal, debugging the issue. Says project is not a module, but I have made it one, tried to run as a module and add to the python path, but it did not like that. Got a hacky MVP create in StevensonTesting.py that works on max open ports and banned ports. Went to meeting with advisor.
+
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | -  | 24  |
+| Alex Stevenson  | 10.5  | 34.5  |
 | Daniel Brink  | 12  | 24  |
 | Jacob Cram  | -  |  17 |
 | Sean Sailer  | 8  | 18  |
