@@ -24,5 +24,5 @@
 14 Feb - 27 Feb
 ===
 - Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
-- Daniel (23 Feb) [4 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
-- Daniel (24 Feb) [3 hours] - Set up the outline of the Peer Review document and began filling it out.
+- Daniel (23 Feb) [5 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
+- Daniel (24 Feb) [4 hours] - Set up the outline of the Peer Review document and began filling it out.
