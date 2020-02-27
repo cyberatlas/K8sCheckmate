@@ -1,5 +1,3 @@
-import json
-
 #Several assumptions that may very well be wrong:
 #	Values and Policies are passed as dictionaries
 #	Ports have the key "port"
@@ -57,14 +55,16 @@ def check(values_dict, policy_dict):
 		#No Root - Boolean
 		elif key == "NO_ROOT":
 		#TODO:  Figure out exactly how this works
-			if values_dict["securityContext"]["runAsNonRoot"] != policy_dict[key]:
+			if "securityContext" in values_dict:
+				if "runAsNonRoot" in values_dict["securityContext"]:
+					if values_dict["securityContext"]["runAsNonRoot"] != policy_dict[key]:
 				
-				numWrong += 1
+						numWrong += 1
 				
-				print("Bad - No Root is not " + str(policy_dict[key]))
-			else:
-				print("Good - No Root matches policy")
-		
+						print("Bad - No Root is not " + str(policy_dict[key]))
+					else:
+						print("Good - No Root matches policy")
+				
 		
 		#Check Outside Images - Boolean
 #		elif key == "CHECK_OUTSIDE_IMAGES":
