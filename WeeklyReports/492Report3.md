@@ -1,6 +1,6 @@
 ﻿# SE 492 – sdmay20-58
 # K8s Checkmate
-# Week 2 Report (2/14 – 2/27)
+# Week 3 Report (2/14 – 2/27)
 ###### Client: Workiva
 ###### Faculty Advisor: Julie Rursch
 ###### Team Members:
@@ -19,8 +19,12 @@ Team Member Contribution Weekly
 
 #### 14 Feb - 20 Feb
 - Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
+- John (17 Feb) [4 hours ] - Looking at IBM example with their values
 - Sean (18 Feb) [2 hours] - Familiarized myself with PyUnit tesitng framework by writing example test code.
+- John (19 Feb) [4 hours ] - Setting up architecture for testing IBM example values.yaml with a Policy file
 - Sean (19 Feb) [1 hour] - Worked on dictionary iteration
+
+
 
 
 
@@ -29,6 +33,7 @@ Team Member Contribution Weekly
 - Daniel (24 Feb) [4 hours] - Set up the outline of the Peer Review document and began filling it out.
 - Sean (22 Feb) [3 hours] - Worked on finding robust test configurations and writing test code using hte test files
 - Sean (27 Feb) [2 hours] - Talked with Alex about recursive roadblock, helped implement a solution that recursively iterates nested dictionaries
+- John (24 Feb) [4 hours ] - Testing in Python for IBM policies and planning out architecture with Alex and Jacob for utulizing dictionaries from the parsing
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
@@ -37,7 +42,7 @@ Team Member Contribution Weekly
 | Daniel Brink  | 12  | 24  |
 | Jacob Cram  | -  |  17 |
 | Sean Sailer  | 8  | 18  |
-| John Young  | -  | 19 |
+| John Young  | 12  | 31 |
 
 
 ### Plans for Coming Week
@@ -55,7 +60,7 @@ Team Member Contribution Weekly
 ### Tasks 
 
 - Alex Stevenson 
-- John 
+- John Meet with our group to force out the final architecture and get every phase to work together
 - Jacob 
-- Sean is going to help finish phase 1 and 2, and implement robust test code using the configured charts and YAML recently added to the repository. Additionally, will work with others on Saturday to get a fleshed-out POC to be tested by end-users next week
+- Sean 
 - Daniel will continue working on value checking, keeping it updated such that it works when integrated into the greater program, as well as testing it sufficiently.  In addition, will spend time working on the Peer Review presentation.
