@@ -9,16 +9,24 @@ def check_max_open_ports(policies_dict):
    print(f'max_open_ports {max_num_ports}')
    return
 
+def get_policies_dict(policy_filepath):
+    """
+    Reads policy files and stores it in a dict
+    :param policy_filepath:
+    :return: policies dict
+    """
+    with open(policy_filepath) as policy_file:
+        policies_dict = yaml.safe_load(policy_file)
+    return policies_dict
+
+
 def main():
     arg_parser = argparse.ArgumentParser(description="The portion of the application that parses and stores the security policy")
     arg_parser.add_argument('PolicyYaml', \
                             help= "The filepath of the policy definitions file")
     args = arg_parser.parse_args()
     policy_filepath = args.PolicyYaml
-
-    with open(policy_filepath) as policy_file:
-        # Dictionary of the policies from the file
-        policies_dict = yaml.safe_load(policy_file)
+    policies_dict = get_policies_dict(policy_filepath)
 
     print(f'Dump policies: \n{yaml.dump(policies_dict)}')
 
