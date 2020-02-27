@@ -1,6 +1,6 @@
 ﻿# SE 492 – sdmay20-58
 # K8s Checkmate
-# Week 2 Report (1/27 – 2/13)
+# Week 2 Report (2/14 – 2/27)
 ###### Client: Workiva
 ###### Faculty Advisor: Julie Rursch
 ###### Team Members:
