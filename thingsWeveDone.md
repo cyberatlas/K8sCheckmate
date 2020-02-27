@@ -30,4 +30,5 @@
 Going to look into recursively searching.
 - Alex (27 Feb) [1 hour] - Merged branches, made necessary modules.
 Code runs in pycharm but not the terminal, debugging the issue.
+Says project is not a module, but I have made it one, tried to run as a module and add to the python path, but it did not like that.
 
