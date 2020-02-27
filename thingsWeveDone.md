@@ -26,7 +26,7 @@
 - Daniel (16 Feb) [3 hours] - Continued looking at examples of Helm charts.
 - Daniel (23 Feb) [5 hours] - Updated valueCheck to fit the format of testpolicies.yaml, and expanded the checking function and testing it.
 - Daniel (24 Feb) [4 hours] - Set up the outline of the Peer Review document and began filling it out.
-- Alex (24 Feb) [2 hours] - Worked on testing values in the chart, changed helmparse to be a module so it can be imported, looked a bit into how to search the key in nested dictionary. 
+- Alex (24 Feb) [2.5 hours] - Worked on testing values in the chart, changed helmparse to be a module so it can be imported, looked a bit into how to search the key in nested dictionary. 
 Going to look into recursively searching.
 - Alex (27 Feb) [3 hours] - Merged branches, made necessary modules.
 Code runs in pycharm but not the terminal, debugging the issue.
