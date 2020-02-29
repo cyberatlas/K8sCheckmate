@@ -1,4 +1,5 @@
-import valueCheck
+import pytest
+from Project.ValueCheck import valueCheck as _vC
 
 
 test_values_1 = {
@@ -35,29 +36,29 @@ test_policy_2 = {
 
 
 def test_1_1():
-	assert valueCheck.check(test_values_1, test_policy_1) == 0
+	assert _vC.check(test_values_1, test_policy_1) == 0
 
 def test_2_1():
-	assert valueCheck.check(test_values_2, test_policy_1) == 1
+	assert _vC.check(test_values_2, test_policy_1) == 1
 
 def test_3_1():
-	assert valueCheck.check(test_values_3, test_policy_1) == 1
+	assert _vC.check(test_values_3, test_policy_1) == 1
 
 def test_4_1():
-	assert valueCheck.check(test_values_4, test_policy_1) == 5
+	assert _vC.check(test_values_4, test_policy_1) == 5
 
 
 def test_1_2():
-	assert valueCheck.check(test_values_1, test_policy_2) == 0
+	assert _vC.check(test_values_1, test_policy_2) == 0
 
 def test_2_2():
-	assert valueCheck.check(test_values_2, test_policy_2) == 1
+	assert _vC.check(test_values_2, test_policy_2) == 1
 
 def test_3_2():
-	assert valueCheck.check(test_values_3, test_policy_2) == 0
+	assert _vC.check(test_values_3, test_policy_2) == 0
 
 def test_4_2():
-	assert valueCheck.check(test_values_4, test_policy_2) == 0
+	assert _vC.check(test_values_4, test_policy_2) == 0
 
 
 test_values_rootTest = {
@@ -69,4 +70,4 @@ test_policy_rootTest = {
 }
 
 def test_rootTest():
-	assert valueCheck.check(test_values_rootTest, test_policy_rootTest) == 1
+	assert _vC.check(test_values_rootTest, test_policy_rootTest) == 1

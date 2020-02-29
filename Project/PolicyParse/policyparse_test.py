@@ -33,7 +33,7 @@ def test_get_policy_dict_not_found_returns_error():
 
 def test_get_policy_dict_found_returns_dict():
     # arrange
-    filepath = 'Project/TestCharts/hello-world/Chart.yaml'
+    filepath = 'Project/TestCharts/Chart.yaml'
 
     # act
     out = _pp.get_policies_dict(filepath)

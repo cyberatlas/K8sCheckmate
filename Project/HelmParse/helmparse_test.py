@@ -12,7 +12,7 @@ def test_get_yaml_file_not_found_raises_error():
 
 def test_get_yaml_file_found_returns_yaml():
     # arrange
-    filepath = 'Project/TestCharts/hello-world/Chart.yaml'
+    filepath = 'Project/TestCharts/Chart.yaml'
 
     # act
     out = _hp.get_yaml(filepath)
