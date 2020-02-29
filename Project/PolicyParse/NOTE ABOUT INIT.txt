@@ -1,0 +1,1 @@
+I frankly have no idea why, but pytest refused to work properly when __init__.py was in this directory.  I've renamed it for my testing branch, I'll try to remember to undo that should I merge branches, apologies if I haven't.

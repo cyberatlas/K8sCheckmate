@@ -1,3 +1,7 @@
 max_open_ports: 5
 banned_ports: 21,23,80
-
+allowed_ports: 69, 420, 80085
+no_root: false
+check_outside_images: True
+banned_images: This, That, Other
+allowed_images: The other one, also this one

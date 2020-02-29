@@ -37,7 +37,7 @@ def pol_parse(policy_filepath):
 		if key in policies_dict:
 			policies_dict[key] = policies_dict[key].replace(" ","")
 			policies_dict[key] = policies_dict[key].split(',')
-			for q in len(policies_dict[key]):
+			for q in range(len(policies_dict[key])):
 				policies_dict[key][q] = int(policies_dict[key][q])
 	except:
 		print("Something went wrong with the " + key + " key in the Policies File")
