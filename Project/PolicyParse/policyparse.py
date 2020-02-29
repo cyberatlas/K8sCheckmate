@@ -4,10 +4,13 @@ from Project.HelmParse import helmparse
 
 # I think it might be prudent down the line to  these in seperate files grouped by utility - but that's for the future
 
-def check_max_open_ports(policies_dict):
-   max_num_ports = policies_dict.get("max_open_ports")
-   print(f'max_open_ports {max_num_ports}')
-   return
+def get_max_open_ports(policies_dict):
+    max_num_ports = policies_dict.get("max_open_ports")
+    if max_num_ports is None:
+        print('The value max_open_ports was not found in the policies_dict')
+        return -1
+    
+    return max_num_ports
 
 def get_policies_dict(policy_filepath):
     """
@@ -15,8 +18,12 @@ def get_policies_dict(policy_filepath):
     :param policy_filepath:
     :return: policies dict
     """
-    with open(policy_filepath) as policy_file:
-        policies_dict = yaml.safe_load(policy_file)
+    try: 
+        with open(policy_filepath) as policy_file:
+            policies_dict = yaml.safe_load(policy_file)
+    except FileNotFoundError as err:
+        raise err
+
     return policies_dict
 
 
