@@ -1,13 +1,22 @@
-from file_type.py import FileType as FileType
+from Models import file_type as FileType
 
 # TODO -- more methods
 def parse_file(fileType):
     if fileType is FileType.JSON:
         parse_json()
-    else if fileType is FileType.YAML:
+    elif fileType is FileType.YAML:
         parse_yaml()
     else:
         # Error handler
+        print("Error handler")
+
+
+def parse_json():
+    print ("fix")
+
+
+def parse_yaml():
+    print ("fix")
 
 
 # def dictIterate(d, level):
@@ -27,7 +36,7 @@ def parse_file(fileType):
 # dictIterate(dictionary, 0)
 
 def main():
-    print('Parser');
+    print('Parser')
 
 if __name__ == '__main__':
     main()

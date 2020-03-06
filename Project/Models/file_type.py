@@ -1,6 +1,6 @@
-from enum import Emum as Enum
+from enum import Enum
 
-export class FileType(Enum):
+class FileType(Enum):
     Config = 0,
     Policy = 1,
     Chart = 2,

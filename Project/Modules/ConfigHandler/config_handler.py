@@ -5,12 +5,12 @@ def get_config_file():
 
 # TODO
 def verify_file_exists(path):
-    return True;
+    return True
 
 # TODO -- more methods wherever necessary
 
 def main():
-    print('Config Handler');
+    print('Config Handler')
 
 if __name__ == '__main__':
     main()
