@@ -1,4 +1,4 @@
-import HelmParse.helmparse as HP
+from HelmParse import helmparse as hp
 
 def main():
     # Check File Exists
