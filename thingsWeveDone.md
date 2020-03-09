@@ -36,3 +36,10 @@ Code runs in pycharm but not the terminal, debugging the issue.
 Says project is not a module, but I have made it one, tried to run as a module and add to the python path, but it did not like that.
 Got a hacky MVP create in StevensonTesting.py that works on max open ports and banned ports.
 Went to meeting with advisor.
+
+28 Feb - 12 Mar
+===
+- All (29 Feb) [4 hours] - Group meeting, discussed future development.
+- Daniel (1 Mar) [3 hours] - Experimented with a new Parsing method.
+- All (5 Mar) [4 hours] - Group meeting, discussed changing the architecture of the project.
+- Daniel (9 Mar) [3 hours] - Attempting to modify existing code to conform to and work with new architecture.
