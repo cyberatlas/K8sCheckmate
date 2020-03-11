@@ -11,8 +11,9 @@ def parse_file(fileType):
         print("Error handler")
 
 
-def parse_json():
-    print ("fix")
+def parse_json(file):
+    # Parse the json file
+    return json.load(file)
 
 
 def parse_yaml():
