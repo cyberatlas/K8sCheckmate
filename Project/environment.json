@@ -1,5 +1,5 @@
 {
-    "chartPath": "",
-    "policyPaths": ["","",""],
-    "outputPath": ""
+    "chartPath": "C:\\Users\\jackc\\492\\Paths\\chart_path.yaml",
+    "policyPaths": ["C:\\Users\\jackc\\492\\Paths\\policy_paths\\first_policy.json", "C:\\Users\\jackc\\492\\Paths\\policy_paths\\second_policy.json","C:\\Users\\jackc\\492\\Paths\\policy_paths\\third_policy.json"],
+    "outputPath": "C:\\Users\\jackc\\492\\Paths\\output_path.txt"
 }

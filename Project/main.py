@@ -8,8 +8,8 @@ def main():
     # Check File Exists
         # Throw error
     config = C.get_config_file()
-
     print(config)
+
     P.main()
     V.main()
     O.main()
