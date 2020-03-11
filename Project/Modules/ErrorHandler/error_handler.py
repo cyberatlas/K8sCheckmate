@@ -26,19 +26,19 @@ def config_not_found():
 
 # TODO
 def incorrect_format(expectedFileType):
-    if expectedFileType is F.FileType.Policy:
+    if expectedFileType is FileType.Policy:
         # handle policy file
         print("The policy file has an incorrect format")
 
-    elif expectedFileType is F.FileType.Chart:
+    elif expectedFileType is FileType.Chart:
         # handle chart file
         print("The chart file has an incorrect format")
 
-    elif expectedFileType is F.FileType.Output:
+    elif expectedFileType is FileType.Output:
         # handle ouput file
         print("The output file has an incorrect format")
 
-    elif expectedFileType is F.FileType.Config:
+    elif expectedFileType is FileType.Config:
         print("The config file has an incorrect format")
 
     else:
