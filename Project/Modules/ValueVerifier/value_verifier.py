@@ -1,5 +1,4 @@
-from Models import error_type as ErrorType
-
+from Models import ErrorType
 
 
 

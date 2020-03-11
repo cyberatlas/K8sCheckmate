@@ -1,26 +1,32 @@
-from Modules.ErrorHandler import error_handler as _error_handler
-from Models import file_type as F
+from Modules.ErrorHandler import *
+from Models import FileType
 from pathlib import Path
 import json
-from Modules.ErrorHandler import error_handler as E
 
 # TODO
 def get_config_file():
     if not verify_file_exists("config.json"):
-        _error_handler.config_not_found()
+        config_not_found()
+
     with open('config.json') as f:
         config_file = json.load(f)
+
     # Check to see if chart path exists
     if not verify_file_exists(config_file['chartPath']):
-        _error_handler.file_not_found(F.FileType.Chart)
+        file_not_found(FileType.Chart)
+
     # Check to see if policy paths exist
     for file_path in config_file['policyPaths']:
         if not verify_file_exists(file_path):
-            _error_handler.file_not_found(F.FileType.Policy)
+            file_not_found(FileType.Policy)
+
     # Check to see if out path exists
     if not verify_file_exists(config_file['outputPath']):
-        _error_handler.file_not_found(F.FileType.Output)
+        file_not_found(FileType.Output)
+
     return config_file
+
+
 # TODO
 def verify_file_exists(path):
     return Path(path).is_file()

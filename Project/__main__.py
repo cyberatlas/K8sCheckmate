@@ -1,21 +1,11 @@
-from Modules import ConfigHandler
+from Modules.ConfigHandler import *
+from Models import *
 
 def main():
-    # Check File Exists
-        # Throw error
-<<<<<<< HEAD:Project/__main__.py
-    config = ConfigHandler.
+    # Get config
+    config = get_config_file()
 
-=======
-    config = C.get_config_file()
->>>>>>> 89f69d0355b553ed3fd666fc318cefe96c5dc737:Project/main.py
     print(config)
-
-    P.main()
-    V.main()
-    O.main()
-    E.main()
-    C.main()
     
     # Parse <file> w/ Helm Parser
 
