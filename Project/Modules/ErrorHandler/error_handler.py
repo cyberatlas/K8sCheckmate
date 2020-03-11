@@ -1,14 +1,15 @@
-from Models import file_type as FileType
+from Models import file_type as F
 
 # TODO
 def file_not_found(expectedFileType):
-    if expectedFileType is FileType.Config:
-        this.config_not_found()
-    elif expectedFileType is FileType.Policy:
+    if expectedFileType is F.FileType.Policy:
         # handle policy file
         print("")
-    elif expectedFileType is FileType.Chart:
+    elif expectedFileType is F.FileType.Chart:
         # handle chart file
+        print("")
+    elif expectedFileType is F.FileType.Output:
+        # handle ouput file
         print("")
     else:
         # handle generic
