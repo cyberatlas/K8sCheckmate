@@ -9,10 +9,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-#Look, everything is FUCKING PLACEHOLDERS so I have NO FUCKING CLUE how any of this is supposed to work together because apparently throwing away literal months of work and completely changing the architecture while NOT FILLING IN A SINGLE FUNCTION SNIPPET AND LEAVING EVERYTHING BLANK is somehow TOTALLY NOT GOING TO CAUSE A PROBLEM when what he had was working fine and all tests showed perfect results (Before it got messed with and broke, that is), but whatever.  I'm pissed, I'm salty, and I just want this fucking project done.  It's funny, if I had ACTUALLY gotten a proper description and examples of everything that can go in either file like I've been repeatedly asking for since FUCKING OCTOBER, I would have, with no exaggeration, been able to do this entire project in a weekend on my own.  But here we are.  Now, I have no fucking idea WHAT the policy file is supposed to look like or how I'm expected to access it, but that's not my job so am I supposed to just fucking wait until whoever agreed to do it gets off their ass and writes a few goddamn functions?  Sure that sounds like a not completely fucking garbage way to develop.  I can't even write tests because the file already here is full of nonsense.  I suppose the alternative is to just not do anything because it'll just be ignored completely, thrown out, and made invalid in less than a fucking week like the last two times.  Oh wait, it'll take at least a month to get thrown out because we can't have anyone ACTUALLY FUCKING DO ANYTHING MORE THAN FOUR HOURS BEFORE ITS DUE.  Is this even still my job?  It's not like they'd tell me if it wasn't.  
-
-#Fuck it.
-
 
 #Several assumptions that may very well be wrong:
 #	Values and Policies are passed as dictionaries
@@ -26,6 +22,9 @@ def check(values_dict, policy_dict):
 
 	#Get a list of used ports
 	portList = port_search(values_dict)
+	
+	#Do the same for Images?
+	imageList = image_search(values_dict)
 	
 	#Iterate through policies we want to check
 	for key in policy_dict:
@@ -93,14 +92,40 @@ def check(values_dict, policy_dict):
 		
 		
 		#Banned Images - list of Images
-		
+		elif key == "banned_images":
+			for image in imageList:
+				if image in policy_dict[key]:
+				
+					if ErrorType.BANNED_IMAGES not in WrongDict:
+						WrongDict[ErrorType.BANNED_IMAGES] = []
+						
+					WrongDict[ErrorType.BANNED_IMAGES].append(image)
+					
+#					print("Bad - Using banned image " + str(port))
+#				else:
+#					print("Good - Using allowed image")
 		
 		#Allowed Images - list of Images
+		elif key == "allowed_images":
+			for image in imageList:
+				if image not in policy_dict[key]:
+				
+					if ErrorType.ALLOWED_IMAGES not in WrongDict:
+						WrongDict[ErrorType.ALLOWED_IMAGES] = []
+						
+					WrongDict[ErrorType.ALLOWED_IMAGES].append(image)
+					
+#					print("Bad - Using banned image " + str(port))
+#				else:
+#					print("Good - Using allowed image")
 		
 		
 	return WrongDict
 
-#Returns a list of ports used
+
+#The thing is, ideally the Values should be parsed in such a way that these functions are unnecessary, but just in case:
+
+#Returns a list of ints representing ports used
 def port_search(values_dict):
 	
 	ports = []
@@ -113,3 +138,18 @@ def port_search(values_dict):
 				ports.append(values_dict[key])
 	
 	return ports
+
+#Returns a list of strings representing images used
+def image_search(values_dict):
+	
+	images = []
+	
+	for key in values_dict:
+		if isinstance(values_dict[key], dict): 
+			images.extend(port_search(values_dict[key]))
+		else:
+#TODO: Figure out how Images are labeled
+			if key == "image": 
+				images.append(values_dict[key])
+	
+	return images
