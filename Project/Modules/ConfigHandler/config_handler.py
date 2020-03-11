@@ -1,6 +1,5 @@
-from Modules.ErrorHandler import *
-from Models import FileType
-from Modules.Parser import parser
+from ..ErrorHandler import file_not_found, config_not_found
+from ...Models import FileType
 from pathlib import Path
 import json
 

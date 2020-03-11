@@ -1,5 +1,5 @@
-from Modules import *
-from Models import *
+from .Modules import *
+from .Models import *
 
 def main():
     # Get config

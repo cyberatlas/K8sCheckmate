@@ -1,4 +1,4 @@
-from Models import ErrorType
+from ...Models import ErrorType
 
 
 

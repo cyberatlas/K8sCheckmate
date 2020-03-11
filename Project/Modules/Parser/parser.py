@@ -1,4 +1,4 @@
-from Models import FileType
+from ...Models import FileType
 
 # TODO -- more methods
 def parse_file(fileType):
