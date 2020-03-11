@@ -3,7 +3,7 @@ from .Models import *
 
 def main():
     # Get config
-    config = get_config_file()
+    config = ConfigHandler.get_config_file()
 
     print(config)
     
