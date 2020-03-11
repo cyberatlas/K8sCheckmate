@@ -7,5 +7,5 @@ class ErrorType(Enum):
     BANNED_PORTS = 1,       #List of ports used that are banned
     ALLOWED_PORTS = 2,      #List of ports used that are not allowed
     NO_ROOT = 3,        #None, key existing is enough
-    BANNED_IMAGES = 5,      #List of images used that are not allowed
-    ALLOWED_IMAGES = 4      #List of images used that are banned
+    ALLOWED_IMAGES = 4,      #List of images used that are banned
+    BANNED_IMAGES = 5      #List of images used that are not allowed
