@@ -5,9 +5,9 @@ import json
 
 # TODO
 def get_config_file():
-    if not verify_file_exists("environment.json"):
+    if not verify_file_exists("config.json"):
         _error_handler.config_not_found()
-    with open('environment.json') as f:
+    with open('config.json') as f:
         config_file = json.load(f)
     # Check to see if chart path exists
     if not verify_file_exists(config_file['chartPath']):
@@ -19,7 +19,7 @@ def get_config_file():
     # Check to see if out path exists
     if not verify_file_exists(config_file['outputPath']):
         _error_handler.file_not_found(F.FileType.Output)
-    
+    return config_file
 # TODO
 def verify_file_exists(path):
     return Path(path).is_file()
