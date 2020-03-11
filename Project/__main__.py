@@ -1,5 +1,5 @@
-from Modules.ConfigHandler import *
-from Models import *
+from K8sCheckmate.Project.Modules import *
+from K8sCheckmate.Project.Models import *
 
 def main():
     # Get config

@@ -1,5 +1,5 @@
-from Modules.ErrorHandler import *
-from Models import FileType
+from K8sCheckmate.Project.Modules.ErrorHandler import *
+from K8sCheckmate.Project.Models import FileType
 from pathlib import Path
 import json
 
