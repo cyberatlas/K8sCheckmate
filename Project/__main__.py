@@ -1,13 +1,9 @@
-from Modules.Parser import parser as P
-from Modules.ValueVerifier import value_verifier as V
-from Modules.OutputHandler import output_handler as O
-from Modules.ErrorHandler import error_handler as E
-from Modules.ConfigHandler import config_handler as C
+from Modules import ConfigHandler
 
 def main():
     # Check File Exists
         # Throw error
-    config = C.get_config_file()
+    config = ConfigHandler.
 
     print(config)
     P.main()

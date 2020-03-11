@@ -1,6 +1,7 @@
 from pathlib import Path
 import json
 from Modules.ErrorHandler import error_handler as E
+
 # TODO
 def get_config_file():
     if not verify_file_exists("environment.json"):
