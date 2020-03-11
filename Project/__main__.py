@@ -1,5 +1,5 @@
-from K8sCheckmate.Project.Modules import *
-from K8sCheckmate.Project.Models import *
+from Modules import *
+from Models import *
 
 def main():
     # Get config
