@@ -21,7 +21,7 @@ Team Member Contribution Weekly
 #### 28 Feb - 5 Mar
 - All (29 Feb) [3 hours] - Group meeting, discussed future development.
 - Daniel (1 Mar) [3 hours] - Experimented with a new Parsing method.
-
+- Jacob (4 Mar) [2 hours] - Ran tests with our current version. Found it had issues, solved by Sean's next major push.
 
 
 
@@ -30,8 +30,9 @@ Team Member Contribution Weekly
 - All (5 Mar) [3 hours] - Group meeting, discussed changing the architecture of the project.
 - Daniel (9 Mar) [3 hours] - Attempting to modify existing code to conform to and work with new architecture.
 - Daniel (11 Mar) [2 hours] - More effort regarding the value verification function.
-- John, Jacob, Sean (6 Mar) [2 hours] - Looked over Sean's new stucture for utulizing every phase of our mvp
+- John, Jacob, Sean (6 Mar) [2 hours] - Looked over Sean's new stucture for utulizing every phase of our mvp.
 - John, Sean (11 Mar) [6 hours] - Worked on testing the file's existence and format type 
+- Jacob (11 Mar) [2 hours] - Compared to make sure that the change in structure provided by Sean was still up to our spec.
 
 
 
@@ -39,7 +40,7 @@ Team Member Contribution Weekly
 |---|---|---|
 | Alex Stevenson  | -  | 34.5  |
 | Daniel Brink  | 14  | 38  |
-| Jacob Cram  | -  |  17 |
+| Jacob Cram  | 12 |  29 |
 | Sean Sailer  | -  | 18  |
 | John Young  | 14  | 45 |
 
@@ -58,8 +59,8 @@ Team Member Contribution Weekly
 
 ### Tasks 
 
-- Alex Stevenson 
+- Alex  
 - John Continue to work on finalizing our mvp with the structure. Also start implementing colors in our terminal for output.
-- Jacob 
+- Jacob Keep updated regarding future schedule changes. Get potential beta version ready to show with above plans finished.
 - Sean 
 - Daniel will stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced.
