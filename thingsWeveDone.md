@@ -39,7 +39,8 @@ Went to meeting with advisor.
 
 28 Feb - 12 Mar
 ===
-- All (29 Feb) [4 hours] - Group meeting, discussed future development.
+- All (29 Feb) [3 hours] - Group meeting, discussed future development.
 - Daniel (1 Mar) [3 hours] - Experimented with a new Parsing method.
-- All (5 Mar) [4 hours] - Group meeting, discussed changing the architecture of the project.
+- All (5 Mar) [3 hours] - Group meeting, discussed changing the architecture of the project.
 - Daniel (9 Mar) [3 hours] - Attempting to modify existing code to conform to and work with new architecture.
+- Daniel (11 Mar) [2 hours] - More effort regarding the value verification function.
