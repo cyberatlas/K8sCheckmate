@@ -30,6 +30,8 @@ Team Member Contribution Weekly
 - All (5 Mar) [3 hours] - Group meeting, discussed changing the architecture of the project.
 - Daniel (9 Mar) [3 hours] - Attempting to modify existing code to conform to and work with new architecture.
 - Daniel (11 Mar) [2 hours] - More effort regarding the value verification function.
+- John, Jacob, Sean (6 Mar) [2 hours] - Looked over Sean's new stucture for utulizing every phase of our mvp
+- John, Sean (11 Mar) [6 hours] - Worked on testing the file's existence and format type 
 
 
 
@@ -39,7 +41,7 @@ Team Member Contribution Weekly
 | Daniel Brink  | 14  | 38  |
 | Jacob Cram  | -  |  17 |
 | Sean Sailer  | -  | 18  |
-| John Young  | -  | 31 |
+| John Young  | 14  | 45 |
 
 
 ### Plans for Coming Week
@@ -57,7 +59,7 @@ Team Member Contribution Weekly
 ### Tasks 
 
 - Alex Stevenson 
-- John 
+- John Continue to work on finalizing our mvp with the structure. Also start implementing colors in our terminal for output.
 - Jacob 
 - Sean 
 - Daniel will stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced.
