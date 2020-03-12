@@ -41,10 +41,10 @@ Team Member Contribution Weekly
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | -  | 34.5  |
+| Alex Stevenson  | 11  | 45.5  |
 | Daniel Brink  | 14  | 38  |
 | Jacob Cram  | 12 |  29 |
-| Sean Sailer  | 12  | 30  |
+| Sean Sailer  | 12  | 18  |
 | John Young  | 14  | 45 |
 
 
