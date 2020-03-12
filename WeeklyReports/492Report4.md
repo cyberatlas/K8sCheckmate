@@ -22,6 +22,7 @@ Team Member Contribution Weekly
 - All (29 Feb) [3 hours] - Group meeting, discussed future development.
 - Daniel (1 Mar) [3 hours] - Experimented with a new Parsing method.
 - Jacob (4 Mar) [2 hours] - Ran tests with our current version. Found it had issues, solved by Sean's next major push.
+- Sean (5 Mar) [1 hour] - Theorized new architecture plan
 
 
 
@@ -41,7 +42,7 @@ Team Member Contribution Weekly
 | Alex Stevenson  | -  | 34.5  |
 | Daniel Brink  | 14  | 38  |
 | Jacob Cram  | 12 |  29 |
-| Sean Sailer  | -  | 18  |
+| Sean Sailer  | 12  | 18  |
 | John Young  | 14  | 45 |
 
 
@@ -62,5 +63,5 @@ Team Member Contribution Weekly
 - Alex  
 - John Continue to work on finalizing our mvp with the structure. Also start implementing colors in our terminal for output.
 - Jacob Keep updated regarding future schedule changes. Get potential beta version ready to show with above plans finished.
-- Sean 
+- Sean Continue pair programming with team members to ensure we are following best practices, and making it easier to work as a team. Additionally, drive development to ensure we have MVP delivered for client to test.
 - Daniel will stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced.
