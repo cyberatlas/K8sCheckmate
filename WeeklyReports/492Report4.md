@@ -44,7 +44,7 @@ Team Member Contribution Weekly
 | Alex Stevenson  | -  | 34.5  |
 | Daniel Brink  | 14  | 38  |
 | Jacob Cram  | 12 |  29 |
-| Sean Sailer  | 12  | 18  |
+| Sean Sailer  | 12  | 30  |
 | John Young  | 14  | 45 |
 
 
