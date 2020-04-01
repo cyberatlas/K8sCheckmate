@@ -1,6 +1,7 @@
 import yaml
 import argparse
-from Project.HelmParse import helmparse
+# from Project.HelmParse import helmparse
+from HelmParse import helmparse
 
 # I think it might be prudent down the line to  these in seperate files grouped by utility - but that's for the future
 
