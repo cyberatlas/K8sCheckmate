@@ -20,7 +20,7 @@ def dictIterate(d, level, searched):
     isfound = False
     for key, value in d.items():
         if key == searched:
-            print(f'\nFOUND {key}:{value}\n')
+            # print(f'\nFOUND {key}:{value}\n')
             foundVals.append(value)
         if isinstance(value, dict):
             # print("{0}{1}: ").format(tabs, key)
@@ -43,25 +43,42 @@ def checkPorts(policies, foundVals):
     for value in foundVals:
         # print(value)
         if str(value) in banned_port_list:
-            print(f'found banned port {value}')
+            print(f'\033[91m'
+                  f'Found banned port {value}'
+                  f'\033[00m')
+        else:
+            print(f'\033[92m'
+                  f'Found port {value} OK'
+                  f'\033[00m')
 
-    print(f'len foundvals: {len(foundVals)}')
+
+    print(f'\nMax open ports: {policies["max_open_ports"]}')
+    # print(f'len foundvals: {len(foundVals)}')
     if len(foundVals) > int(policies["max_open_ports"]):
-        print("too many open ports")
+        print(f"\033[91m"
+              f"Too many open ports ({len(foundVals)})"
+              f"\033[00m")
     else:
-        print(f"Num ports({len(foundVals)}) in acceptable range")
+        print(f"\033[92m"
+              f"Num ports({len(foundVals)}) in acceptable range "
+              f"\033[00m")
+
 
 
 
 def main():
     # vals = helmparse
-    # from HelmParse import helmparse.get_yaml("../TestCharts/hello-world/values.yaml")
     #     vals = helmparse.get_yaml("../TestCharts/hello-world/values.yaml")
-    vals = helmparse.get_yaml("TestCharts/hello-world/values.yaml")
+    # vals = helmparse.get_yaml("TestCharts/hello-world/values.yaml")
+    values_loc = "/home/ruski/Documents/charts-master/stable/bookstack/values.yaml"
+    # values_loc = "TestCharts/hello-world/values.yaml"
+    # vals = helmparse.get_yaml("/home/ruski/Documents/charts-master/stable/bookstack/values.yaml")
+    print(f'\nChecking values at {values_loc}\n')
+    vals = helmparse.get_yaml(values_loc)
     # policies = policyparse.get_policies_dict("../PolicyParse/testpolicies.yaml")
     policies = policyparse.get_policies_dict("PolicyParse/testpolicies.yaml")
     # print(type(policies['banned_ports']))
-    valueCheck.check(vals, policies)
+    # valueCheck.check(vals, policies)
 
     foundVals = dictIterate(vals, 0, 'port')
     checkPorts(policies,foundVals)
