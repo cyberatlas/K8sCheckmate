@@ -21,23 +21,25 @@ Team Member Contribution Weekly
 #### 13 Mar - 19 Mar
 - John (17 Mar) [3 hours] - Tried to incorporate intelisense into our project
 - Sean (17 Mar) [3 hours] - Worked with John to try and get the python dev environment set up and compatible with our project
+- Alex (16 Mar) [3 hours] - Made slides, recorded slides, and did stuff to help with presentation. I am guessing the date, was sometime that week.
 
 
 
 #### 20 Mar - 26 Mar
 - Sean (20 Mar) [3 hours] - Worked with outputting parsed values to the terminal in a user-friendly way, as well as logging them for auditing purposes
 
-
-
+- Alex (26 Mar) [1 hour] - Meeting with our advisor. Discussed progress and stuff.
+- Alex (27 Mar) [1 hour] - Worked on the peer review stuff.
+- Alex (28 Mar) [1 hour] - Worked on the peer review reply stuff.
 
 #### 27 Mar - 2 April
-
+- Alex (1 April) [3 hours] - Cleaned up and added to MVP commit, looked at current project refactor, assessing next steps. 
 
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | xxxx | 45.5  |
+| Alex Stevenson  | 9 | 54.5  |
 | Daniel Brink  | xxx | 38  |
 | Jacob Cram  | xxx |  29 |
 | Sean Sailer  | xxx | 36  |
