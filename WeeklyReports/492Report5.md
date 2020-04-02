@@ -19,7 +19,7 @@ Team Member Contribution Weekly
 
 
 #### 13 Mar - 19 Mar
-- John (17 Mar) [3 hours] - Tried to incorporate intelisense into our project
+- John (17 Mar) [6 hours] - Tried to incorporate intelisense into our project
 - Sean (17 Mar) [3 hours] - Worked with John to try and get the python dev environment set up and compatible with our project
 - Alex (16 Mar) [3 hours] - Made slides, recorded slides, and did stuff to help with presentation. I am guessing the date, was sometime that week.
 
@@ -31,10 +31,12 @@ Team Member Contribution Weekly
 - Alex (26 Mar) [1 hour] - Meeting with our advisor. Discussed progress and stuff.
 - Alex (27 Mar) [1 hour] - Worked on the peer review stuff.
 - Alex (28 Mar) [1 hour] - Worked on the peer review reply stuff.
+- John (22 Mar) [3 hours] - Met with advisor/looked in our git to pull a previous push in order to set up a demo
 
 #### 27 Mar - 2 April
 - Daniel (28 Mar) [4 hours] - Attempted to add informative terminal output to value_verifier
 - Alex (1 April) [3 hours] - Cleaned up and added to MVP commit, looked at current project refactor, assessing next steps. 
+- John (28 Mar) [3 hours] - Talked with Alex and talked about how we can get a previous commit to show our mvp/discuss our layout
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
@@ -43,7 +45,7 @@ Team Member Contribution Weekly
 | Daniel Brink  | 6 | 44  |
 | Jacob Cram  | xxx |  29 |
 | Sean Sailer  | xxx | 36  |
-| John Young  | xxx | 45 |
+| John Young  | 12 | 57 |
 
 
 ### Plans for Coming Week
