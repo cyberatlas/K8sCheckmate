@@ -26,11 +26,13 @@ Team Member Contribution Weekly
 
 #### 20 Mar - 26 Mar
 - Sean (20 Mar) [3 hours] - Worked with outputting parsed values to the terminal in a user-friendly way, as well as logging them for auditing purposes
+- Daniel (22 Mar) [2 hours] - Installed and set up necessary software to support working remotely
 
 
 
 
 #### 27 Mar - 2 April
+- Daniel (28 Mar) [4 hours] - Attempted to add informative terminal output to value_verifier
 
 
 
@@ -38,7 +40,7 @@ Team Member Contribution Weekly
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
 | Alex Stevenson  | xxxx | 45.5  |
-| Daniel Brink  | xxx | 38  |
+| Daniel Brink  | 6 | 44  |
 | Jacob Cram  | xxx |  29 |
 | Sean Sailer  | xxx | 36  |
 | John Young  | xxx | 45 |
@@ -63,5 +65,5 @@ Team Member Contribution Weekly
 - John Continue to work on finalizing our mvp with the structure. Also start implementing colors in our terminal for output.
 - Jacob Keep updated regarding future schedule changes. Get potential beta version ready to show with above plans finished.
 - Sean Continue pair programming with team members to ensure we are following best practices, and making it easier to work as a team. Additionally, drive development to ensure we have MVP delivered for client to test.
-- Daniel will stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced.
+- Daniel will continue to stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced, and work towards the final presentation and poster.
 
