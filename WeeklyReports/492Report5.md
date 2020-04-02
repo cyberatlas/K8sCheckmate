@@ -20,11 +20,12 @@ Team Member Contribution Weekly
 
 #### 13 Mar - 19 Mar
 - John (17 Mar) [3 hours] - Tried to incorporate intelisense into our project
+- Sean (17 Mar) [3 hours] - Worked with John to try and get the python dev environment set up and compatible with our project
 
 
 
 #### 20 Mar - 26 Mar
-
+- Sean (20 Mar) [3 hours] - Worked with outputting parsed values to the terminal in a user-friendly way, as well as logging them for auditing purposes
 
 
 
@@ -39,12 +40,13 @@ Team Member Contribution Weekly
 | Alex Stevenson  | xxxx | 45.5  |
 | Daniel Brink  | xxx | 38  |
 | Jacob Cram  | xxx |  29 |
-| Sean Sailer  | xxx | 30  |
+| Sean Sailer  | xxx | 36  |
 | John Young  | xxx | 45 |
 
 
 ### Plans for Coming Week
 ---
+- [] Have client test MVP and provide feedback
 - [] Figure out if the values must be saved to `values.yaml` or if they can be defined where they are used in the charts. If the latter is true, we will need to find a way to check all of the possible places they can be
 - [] Find a way to parse the values from any sub-charts
 - [] Figure out how templates play into this. Do we rerun the check on the templates? Do we have a list of allowed templates? How should go about dealing with them in a way that allows maximum flexibility to the end-user?
