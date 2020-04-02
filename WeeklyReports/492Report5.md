@@ -1,4 +1,4 @@
-﻿SE 492 – sdmay20-58
+SE 492 – sdmay20-58
 ===
 # K8s Checkmate
 # Week 5 Report (3/13 – 4/2)
@@ -19,21 +19,24 @@ Team Member Contribution Weekly
 
 
 #### 13 Mar - 19 Mar
+- Jacob (16 Mar) [3 hours] - Made/recorded slides, put together the slides and recordings for the team and turned it in.
+- Alex (16 Mar) [3 hours] - Made slides, recorded slides, and did stuff to help with presentation. I am guessing the date, was sometime that week.
 - John (17 Mar) [6 hours] - Tried to incorporate intelisense into our project
 - Sean (17 Mar) [3 hours] - Worked with John to try and get the python dev environment set up and compatible with our project
-- Alex (16 Mar) [3 hours] - Made slides, recorded slides, and did stuff to help with presentation. I am guessing the date, was sometime that week.
-
-
+- Jacob (17 Mar) [2 hours] - Worked to figure out why intelisense was working on my laptop but not John or Seans.
 
 #### 20 Mar - 26 Mar
 - Sean (20 Mar) [3 hours] - Worked with outputting parsed values to the terminal in a user-friendly way, as well as logging them for auditing purposes
 - Daniel (22 Mar) [2 hours] - Installed and set up necessary software to support working remotely
+- John (22 Mar) [3 hours] - Met with advisor/looked in our git to pull a previous push in order to set up a demo
+- Jacob (22 Mar) [1 hour] - Met with advisor and talked to team about demo for advisor.
 - Alex (26 Mar) [1 hour] - Meeting with our advisor. Discussed progress and stuff.
 - Alex (27 Mar) [1 hour] - Worked on the peer review stuff.
 - Alex (28 Mar) [1 hour] - Worked on the peer review reply stuff.
-- John (22 Mar) [3 hours] - Met with advisor/looked in our git to pull a previous push in order to set up a demo
+- Jacob (28 Mar) [2 hours] - Worked on peer review with team, put together and selected the best of our teams questions to post for the other teams.
 
 #### 27 Mar - 2 April
+
 - Daniel (28 Mar) [4 hours] - Attempted to add informative terminal output to value_verifier
 - Alex (1 April) [3 hours] - Cleaned up and added to MVP commit, looked at current project refactor, assessing next steps. 
 - John (28 Mar) [3 hours] - Talked with Alex and talked about how we can get a previous commit to show our mvp/discuss our layout
@@ -43,7 +46,7 @@ Team Member Contribution Weekly
 |---|---|---|
 | Alex Stevenson  | 9 | 54.5  |
 | Daniel Brink  | 6 | 44  |
-| Jacob Cram  | xxx |  29 |
+| Jacob Cram  | 8 | 37 |
 | Sean Sailer  | 9 | 39  |
 | John Young  | 12 | 57 |
 
