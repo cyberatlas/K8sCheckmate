@@ -37,14 +37,14 @@ Team Member Contribution Weekly
 - Daniel (28 Mar) [4 hours] - Attempted to add informative terminal output to value_verifier
 - Alex (1 April) [3 hours] - Cleaned up and added to MVP commit, looked at current project refactor, assessing next steps. 
 - John (28 Mar) [3 hours] - Talked with Alex and talked about how we can get a previous commit to show our mvp/discuss our layout
-
+- Sean (27 Mar) [3 hours] - More work on outputting and logging of results
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
 | Alex Stevenson  | 9 | 54.5  |
 | Daniel Brink  | 6 | 44  |
 | Jacob Cram  | xxx |  29 |
-| Sean Sailer  | xxx | 36  |
+| Sean Sailer  | xxx | 39  |
 | John Young  | 12 | 57 |
 
 
