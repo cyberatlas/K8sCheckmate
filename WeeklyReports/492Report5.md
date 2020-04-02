@@ -19,8 +19,7 @@ Team Member Contribution Weekly
 
 
 #### 13 Mar - 19 Mar
-
-
+- John (17 Mar) [3 hours] - Tried to incorporate intelisense into our project
 
 
 
