@@ -1,23 +1,26 @@
-from ...Models import FileType
+import yaml
 
-# TODO -- more methods
-def parse_file(fileType):
-    if fileType is FileType.JSON:
-        parse_json()
-    elif fileType is FileType.YAML:
-        parse_yaml()
-    else:
-        # Error handler
-        print("Error handler")
+class Parser():
 
+    def __init__(self):
+        self.__chart_dict = None
+        self.__policy_dict = None
+        
 
-def parse_json(file):
-    # Parse the json file
-    return json.load(file)
+    def load_chart(self, path):
+        with open(path) as json_file:
+            self.__chart_dict = yaml.load(json_file, yaml.SafeLoader)
 
+    def load_policy(self, path):
+        with open(path) as json_file:
+            self.__policy_dict = yaml.load(json_file, yaml.SafeLoader)
 
-def parse_yaml():
-    print ("fix")
+    def get_chart_dict(self):
+        return self.__chart_dict
+
+    def get_policy_dict(self):
+        return self.__policy_dict
+
 
 
 # def dictIterate(d, level):
@@ -35,9 +38,3 @@ def parse_yaml():
 # dictionary = {'cats': 'whiskers', 'dogs': { 'corgi': 'winston'}, 'KEY': 'walue', 'dict': { 'dict2': { 'special': 'times' }}, 'one': 'two'}
 
 # dictIterate(dictionary, 0)
-
-def main():
-    print('Parser')
-
-if __name__ == '__main__':
-    main()

@@ -1,22 +1,34 @@
-from .Modules import *
-from .Models import *
+from Project.Modules.ConfigHandler.config_handler import ConfigHandler
+from Project.Modules.Parser.parser import Parser
 
 def main():
     # Get config
-    config = ConfigHandler.get_config_file()
+    config_handler = ConfigHandler()
+    parser = Parser()
 
+    config = config_handler.get_config()
     print(config)
-    
-    # Parse <file> w/ Helm Parser
 
-    # Parse <Policy> w/ Policy Parser
+    if config['policyPath'] != '':
+        parser.load_policy(config['policyPath'])
+    else:
+        # handle error
+        print('Err')
 
-    # Check outputs w/ Value Check
-    
-    # Red/Green terminal While Parsing
+    if config['chartPath'] != '':
+        parser.load_chart(config['chartPath'])
+    else:
+        # handle error
+        print('Err')
 
-    # Log When done (Errors @ top)
+    chart_dict = parser.get_chart_dict()
+    policy_dict = parser.get_policy_dict()
 
-    print("Hello World")
+    # Verify the values
+    print(chart_dict)
+    print(policy_dict)
 
-main()
+
+
+if __name__ == "__main__":
+    main()
