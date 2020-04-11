@@ -1,55 +1,31 @@
-from ...Models import FileType
+class ErrorHandler():
 
-# TODO
-def file_not_found(expectedFileType):
-    if expectedFileType is FileType.Policy:
-        # handle policy file
-        print("")
-    elif expectedFileType is FileType.Chart:
-        # handle chart file
-        print("")
-    elif expectedFileType is FileType.Output:
-        # handle ouput file
-        print("")
+    # Constructor
+    def __init__(self):
+        print("constructor")
 
-    else:
-        # handle generic
-        print("")
+    # Throws error message if file does not exist
+    def file_not_found(self, expectedFileType):
+        print(expectedFileType, " path could not be found")
+        exit(-1)
 
-    exit(-1)
+    # Throws error if the file type is incorrect
+    """def incorrect_format(expectedFileType):
+        if expectedFileType is FileType.Policy:
+            # handle policy file
+            print("The policy file has an incorrect format")
 
+        elif expectedFileType is FileType.Chart:
+            # handle chart file
+            print("The chart file has an incorrect format")
 
-# TODO
-def config_not_found():
-    print('TODO')
+        elif expectedFileType is FileType.Output:
+            # handle ouput file
+            print("The output file has an incorrect format")
 
+        elif expectedFileType is FileType.Config:
+            print("The config file has an incorrect format")
 
-# TODO
-def incorrect_format(expectedFileType):
-    if expectedFileType is FileType.Policy:
-        # handle policy file
-        print("The policy file has an incorrect format")
-
-    elif expectedFileType is FileType.Chart:
-        # handle chart file
-        print("The chart file has an incorrect format")
-
-    elif expectedFileType is FileType.Output:
-        # handle ouput file
-        print("The output file has an incorrect format")
-
-    elif expectedFileType is FileType.Config:
-        print("The config file has an incorrect format")
-
-    else:
-        # handle generic
-        print("Generic file has incorrect format")
-
-
-# TODO -- more moethods
-
-def main():
-    print('Error Handler')
-
-if __name__ == '__main__':
-    main()
+        else:
+            # handle generic
+            print("Generic file has incorrect format")"""
