@@ -5,9 +5,12 @@ class ErrorHandler():
         print("constructor")
 
     # Throws error message if file does not exist
-    def file_not_found(self, expectedFileType):
-        print(expectedFileType, " path could not be found")
+    def file_not_found(self, path):
+        print(path, " file could not be found")
         exit(-1)
+
+    def path_not_found(self, parameter):
+        print("Please provide a path for ", parameter)
 
     # Throws error if the file type is incorrect
     """def incorrect_format(expectedFileType):

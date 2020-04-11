@@ -1,15 +1,14 @@
 import yaml
 
+
 class Parser():
 
     def __init__(self):
         self.__chart_dict = None
         self.__policy_dict = None
         self.__values_dict = None
-        
 
     def load_chart(self, path):
-
         with open(path) as yaml_file:
             self.__chart_dict = yaml.load(yaml_file, yaml.SafeLoader)
 
