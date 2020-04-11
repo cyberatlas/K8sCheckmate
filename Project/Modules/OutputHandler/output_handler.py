@@ -1,8 +1,6 @@
 import datetime
 from os import path, makedirs
 
-from Project.Models.error_type import ErrorType
-
 
 class OutputHandler():
 
