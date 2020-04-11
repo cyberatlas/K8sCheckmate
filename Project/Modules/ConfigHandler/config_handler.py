@@ -1,7 +1,7 @@
 import json
 
 
-class ConfigHandler():
+class ConfigHandler:
 
     def __init__(self):
         self.__config = None
