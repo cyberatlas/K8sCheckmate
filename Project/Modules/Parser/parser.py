@@ -13,16 +13,25 @@ class Parser():
 
     # Load methods will check to see if the file exists
     def load_chart(self, path):
-        with open(path) as yaml_file:
-            self.__chart_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        try:
+            with open(path) as yaml_file:
+                self.__chart_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        except(FileNotFoundError, IOError):
+            self.__errorHandler.file_not_found(path)
 
     def load_policy(self, path):
-        with open(path) as yaml_file:
-            self.__policy_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        try:
+            with open(path) as yaml_file:
+                self.__policy_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        except(FileNotFoundError, IOError):
+            self.__errorHandler.file_not_found(path)
 
     def load_values(self, path):
-        with open(path) as yaml_file:
-            self.__values_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        try:
+            with open(path) as yaml_file:
+                self.__values_dict = yaml.load(yaml_file, yaml.SafeLoader)
+        except(FileNotFoundError, IOError):
+            self.__errorHandler.file_not_found(path)
 
     # Get methods check if value has been provided
     def get_chart_dict(self, config):
