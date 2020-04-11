@@ -1,6 +1,7 @@
 from Project.Modules.ConfigHandler.config_handler import ConfigHandler
 from Project.Modules.Parser.parser import Parser
 
+
 def main():
     # Get config
     config_handler = ConfigHandler()
@@ -8,7 +9,6 @@ def main():
 
     config = config_handler.get_config()
     print(config)
-
 
     chart_dict = parser.get_chart_dict(config)
     policy_dict = parser.get_policy_dict(config)
@@ -18,7 +18,6 @@ def main():
     print(chart_dict)
     print(policy_dict)
     print(values_dict)
-
 
 
 if __name__ == "__main__":

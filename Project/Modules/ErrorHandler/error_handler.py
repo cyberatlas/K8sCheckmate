@@ -1,4 +1,4 @@
-class ErrorHandler():
+class ErrorHandler:
 
     # Constructor
     def __init__(self):
