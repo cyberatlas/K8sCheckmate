@@ -48,14 +48,14 @@ class OutputHandler():
         timestamp = str(datetime.datetime.now()).split('.')[0].replace(' ', '_').replace(':', '_')
         file_name = path.join(self.__output_directory, 'k8scheckmate_{0}.txt'.format(timestamp))
         file = open(file_name, 'a+')
-        file.write('Finished parsing security policy in {0} seconds'.format(elapsed_time))
+        file.write('Finished parsing security policy in {0} seconds\n'.format(elapsed_time))
         for k,v in policy_dict.items():
             if verify_dict.get(k):
                 #failed
-                file.write('Policy \"{0}\" FAILED\n\tExpected:{0}\n\tWas:{1}'.format(k, v, verify_dict[k]))
+                file.write('Policy \"{0}\" FAILED\n\tExpected:{1}\n\tWas:{2}\n'.format(k, v, verify_dict[k]))
 
             else:
                 #passed
-                file.write('Policy \"{0}\" PASSED')
+                file.write('Policy \"{0}\" PASSED\n'.format(k))
         file.close()
         print('Successfully wrote output to file: {0}'.format(file_name))
