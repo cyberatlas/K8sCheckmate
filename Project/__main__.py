@@ -28,7 +28,7 @@ def main():
     output_handler.output_to_terminal(policy_dict, verify_dict, end - start)
     if config['outputPath'] != '':
         output_handler.set_output_directory(config['outputPath'])
-        output_handler.log_to_file(policy_dict, verify_dict)
+        output_handler.log_to_file(policy_dict, verify_dict, end - start)
 
 
 if __name__ == "__main__":
