@@ -13,6 +13,9 @@ class Parser():
 
     # Load methods will check to see if the file exists
     def load_chart(self, path):
+        with open(path) as yaml_file:
+            self.__chart_dict = yaml.load(yaml_file, yaml.SafeLoader)
+
         try:
             with open(path) as yaml_file:
                 self.__chart_dict = yaml.load(yaml_file, yaml.SafeLoader)

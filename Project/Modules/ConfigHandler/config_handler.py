@@ -1,5 +1,5 @@
 import json
-
+from os import path
 
 class ConfigHandler:
 
@@ -12,9 +12,10 @@ class ConfigHandler:
             self.__config = json.load(json_file)
 
     def get_config(self):
-        if self.__config is None:
-            self.load_config()
-            return self.__config
+        if not path.exists(self.__CONFIG_PATH):
+            print('config.json not found')
+            # handle error
 
         else:
+            self.load_config()
             return self.__config
