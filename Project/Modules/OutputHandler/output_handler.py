@@ -1,6 +1,8 @@
 import datetime
 from os import path, makedirs
 
+from Project.Modules.ErrorHandler.error_handler import ErrorHandler
+
 
 class OutputHandler():
 
@@ -11,13 +13,15 @@ class OutputHandler():
         self.__bold = '\033[1m'
         self.__italic = '\033[3m'
         self.__end = '\033[0m'
+        self.__errorHandler = ErrorHandler()
 
     def set_output_directory(self, out_dir):
         if path.exists(out_dir):
             self.__output_directory = out_dir
         else:
             makedirs(out_dir)
-            # Handle error
+            # Check with Sean if this is right
+            self.__errorHandler.path_does_not_exist("Output directory")
 
     def output_to_terminal(self, policy_dict, verify_dict, elapsed_time):
         print('Finished parsing security policy in {0} seconds'.format(elapsed_time))
@@ -41,6 +45,7 @@ class OutputHandler():
     def log_to_file(self, policy_dict, verify_dict, elapsed_time):
         if self.__output_directory is None:
             # Handle error
+            self.__errorHandler.path_does_not_exist("Output Directory")
             pass
 
         timestamp = str(datetime.datetime.now()).split('.')[0].replace(' ', '_').replace(':', '_')
