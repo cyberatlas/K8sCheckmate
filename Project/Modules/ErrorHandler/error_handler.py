@@ -9,7 +9,7 @@ class ErrorHandler():
         print(path, " file could not be found")
         exit(-1)
 
-    def path_not_found(self, parameter):
+    def path_does_not_exist(self, parameter):
         print("Please provide a path for ", parameter)
 
     # Throws error if the file type is incorrect
