@@ -39,7 +39,7 @@ class Parser():
             return self.__policy_dict
         else:
             # handle error
-            print('Err')
+            self.__errorHandler.path_does_not_exist("Policy Dictionary")
 
     def get_values_dict(self, config):
         if config['valuesPath'] != '':
@@ -47,7 +47,7 @@ class Parser():
             return self.__values_dict
         else:
             # handle error
-            print('Err')
+            self.__errorHandler.path_does_not_exist("Values Dictionary")
 
 # def dictIterate(d, level):
 #     tabs = ''.join('\t' for i in range(0, level))
