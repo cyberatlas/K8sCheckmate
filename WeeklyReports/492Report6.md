@@ -26,6 +26,7 @@ Team Member Contribution Weekly
 - John and Sean (11 Apr) [8 hours] Worked on the error handling, config handling, outputting to file and terminal, and parsing
 - Daniel (12 Apr) [4 hours] - Working on Final Report, Final Presentation, Final Poster
 - John (16 Apr) [4 hours] Worked on cleaning up the code to satisfy Workiva's Requirements
+- Sean (16 Apr) [4 hours] Worked more on outputting, environment/config setup, parsing, and adding more rules to the policy
 
 
 
@@ -34,7 +35,7 @@ Team Member Contribution Weekly
 | Alex Stevenson  | x | 54.5  |
 | Daniel Brink  | 8 | 52  |
 | Jacob Cram  | x | 37 |
-| Sean Sailer  | x | 39  |
+| Sean Sailer  | 12 | 51  |
 | John Young  | 12 | 69 |
 
 
