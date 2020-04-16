@@ -2,7 +2,7 @@ class ErrorHandler:
 
     # Constructor
     def __init__(self):
-        print("constructor")
+        pass
 
     # Throws error message if file does not exist
     def file_not_found(self, path):
@@ -23,7 +23,7 @@ class ErrorHandler:
             print("The chart file has an incorrect format")
 
         elif expectedFileType is FileType.Output:
-            # handle ouput file
+            # handle output file
             print("The output file has an incorrect format")
 
         elif expectedFileType is FileType.Config:

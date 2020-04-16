@@ -25,14 +25,21 @@ class OutputHandler():
 
     def output_to_terminal(self, policy_dict, verify_dict, elapsed_time):
         print('Finished parsing security policy in {0} seconds'.format(elapsed_time))
-        for k,v in policy_dict.items():
+        for k, v in policy_dict.items():
             if verify_dict.get(k):
                 #failed
-                print('Policy \"{0}\" '.format(k) +
-                      self.__failing + 'FAILED' +
-                      self.__end + self.__italic +
-                      '\n\tExpected:{0}\n\tWas:{1}'.format(v, verify_dict[k]) +
-                      self.__end)
+                if "BANNED" in k:
+                    print('Policy \"{0}\" '.format(k) +
+                          self.__failing + 'FAILED' +
+                          self.__end + self.__italic +
+                          '\n\tFound Banned Artifact: {0}\n\tBanned List: {1}'.format(verify_dict[k], v) +
+                          self.__end)
+                else:
+                    print('Policy \"{0}\" '.format(k) +
+                          self.__failing + 'FAILED' +
+                          self.__end + self.__italic +
+                          '\n\tExpected: {0}\n\tWas: {1}'.format(v, verify_dict[k]) +
+                          self.__end)
 
             else:
                 #passed

@@ -9,7 +9,6 @@ import time
 def main():
     start = time.time()
 
-
     # Get config
     config_handler = ConfigHandler()
     parser = Parser()
@@ -22,14 +21,15 @@ def main():
     policy_dict = parser.get_policy_dict(config)
     values_dict = parser.get_values_dict(config)
 
-    verify_dict = value_verifier.check(values_dict, policy_dict)
+    for val in values_dict:
+        verify_dict = value_verifier.check(val, policy_dict)
 
-    # Do some logging
-    end = time.time()
-    output_handler.output_to_terminal(policy_dict, verify_dict, end - start)
-    if config['outputPath'] != '':
-        output_handler.set_output_directory(config['outputPath'])
-        output_handler.log_to_file(policy_dict, verify_dict, end - start)
+        # Do some logging
+        end = time.time()
+        output_handler.output_to_terminal(policy_dict, verify_dict, end - start)
+        if config['outputPath'] != '':
+            output_handler.set_output_directory(config['outputPath'])
+            output_handler.log_to_file(policy_dict, verify_dict, end - start)
 
 if __name__ == "__main__":
     main()

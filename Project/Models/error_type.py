@@ -1,11 +1,10 @@
 from enum import Enum
 
 #Definition of Errors for the WrongDict in value_verifier to use
-#Key is Enum, Value is more info regarding error as desribed in comments below
+#Key is Enum, Value is more info regarding error as described in comments below
 class ErrorType(Enum):
-    MAX_OPEN_PORTS = 0,     #Number of ports over limit
-    BANNED_PORTS = 1,       #List of ports used that are banned
-    ALLOWED_PORTS = 2,      #List of ports used that are not allowed
-    NO_ROOT = 3,        #None, key existing is enough
-    ALLOWED_IMAGES = 4,      #List of images used that are banned
-    BANNED_IMAGES = 5      #List of images used that are not allowed
+    MAX_OPEN_PORTS = "MAX_OPEN_PORTS",     #Number of ports over limit
+    BANNED_PORTS = "BANNED_PORTS",       #List of ports used that are banned
+    NO_ROOT = "NO_ROOT",        #None, key existing is enough
+    BANNED_IMAGES = "BANNED_IMAGES",      #List of images used that are not allowed
+    BANNED_USERS = "BANNED_USERS"
