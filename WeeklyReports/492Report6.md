@@ -23,16 +23,22 @@ Team Member Contribution Weekly
 
 
 #### 10 Apr - 16 Apr
--Daniel (12 Apr) [4 hours] - Working on Final Report, Final Presentation, Final Poster
+- John and Sean (11 Apr) [8 hours] Worked on the error handling, config handling, outputting to file and terminal, and parsing
+- Daniel (12 Apr) [4 hours] - Working on Final Report, Final Presentation, Final Poster
+- Jacob (12 Apr) [4 hours] - Working on testing, looked at other team responses for advise
+- Alex (14 Apr) [4 hours] - Worked on the refactor a bit
+- John (16 Apr) [4 hours] Worked on cleaning up the code to satisfy Workiva's Requirements
+- Sean (16 Apr) [4 hours] Worked more on outputting, environment/config setup, parsing, and adding more rules to the policy
+
 
 
 | Name  | Bi-weekly Hours | Total Hours  |
 |---|---|---|
-| Alex Stevenson  | x | 54.5  |
+| Alex Stevenson  | 4 | 58.5  |
 | Daniel Brink  | 8 | 52  |
-| Jacob Cram  | x | 37 |
-| Sean Sailer  | x | 39  |
-| John Young  | x | 57 |
+| Jacob Cram  | 4 | 41 |
+| Sean Sailer  | 12 | 51  |
+| John Young  | 12 | 69 |
 
 
 ### Plans for Coming Week
@@ -51,7 +57,7 @@ Team Member Contribution Weekly
 ### Tasks 
 
 - Alex  
-- John 
-- Jacob 
-- Sean 
+- John will continue to finalize the code and work on the poster. Also will start preparing for the presentation 
+- Jacob continue to write tests and make sure we have full testing coverage. Prep for presentation.
+- Sean will continue to work on the logic and ensure that the product is tested by the client to ensure satisfaction
 - Daniel will continue to stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced, and work towards the final presentation and poster.
