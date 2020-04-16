@@ -1,6 +1,6 @@
 {
-	"chartPath": "C:\\Users\\Sean\\Desktop\\Chart.yaml",
-	"policyPath": "C:\\Users\\Sean\\Desktop\\policy.yaml",
-	"valuesPath": ["C:\\Users\\Sean\\Desktop\\values.yaml", "C:\\Users\\Sean\\Desktop\\values_two.yaml"],
-	"outputPath": "C:\\Users\\Sean\\Desktop"
+	"chartPath": "TestCharts/chart.yaml",
+	"policyPath": "TestCharts/policy.yaml",
+	"valuesPath": ["TestCharts/values.yaml"],
+	"outputPath": "Output"
 }

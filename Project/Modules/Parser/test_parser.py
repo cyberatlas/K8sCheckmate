@@ -1,18 +1,24 @@
 import pytest
 
-from Project.Parser.parser
-#from Project.policyparse import policyparse as _pp
-# import os
+from Project.Modules.Parser.parser import Parser
 
-# def test_get_max_open_ports_not_found_prints_error():
-#     # arrange
-#     dictionary = {}
 
-#     # act
-#     out = _pp.get_max_open_ports(dictionary)
+class TestParser():
+    def __init__(self):
+        self.__parser_test = Parser()
 
-#     # assert
-#     assert out == -1
+    def test_load_chart_file(self):
+        # arrange
+        file = 'Project/TestCharts/values.yaml'
+        dict1 = {}
+
+        # act
+        dict_check = self.__parser_test.load_chart(file)
+
+        # assert
+        assert dict1.viewitems() < dict_check.viewitems()
+
+    #def test_loadchart_nofile(self):
 
 # def test_get_max_open_ports_found_returns_value():
 #     # arrange
@@ -44,4 +50,3 @@ from Project.Parser.parser
 #     assert type(out) is dict
 #     assert out.get('name') == 'hello-world'
 #     assert out.get('version') == '0.1.0'
-
