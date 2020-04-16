@@ -8,7 +8,7 @@ class ConfigHandler:
 
     def __init__(self):
         self.__config = None
-        self.__CONFIG_PATH = 'config.json'
+        self.__CONFIG_PATH = 'Project/config.json'
         self.__errorHandler = ErrorHandler()
 
     def load_config(self):

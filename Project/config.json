@@ -1,6 +1,6 @@
 {
-	"chartPath": "TestCharts/chart.yaml",
-	"policyPath": "TestCharts/policy.yaml",
-	"valuesPath": ["TestCharts/values.yaml"],
-	"outputPath": "Output"
+	"chartPath": "Project/TestCharts/Chart.yaml",
+	"policyPath": "Project/TestCharts/policy.yaml",
+	"valuesPath": ["Project/TestCharts/test1.yaml", "Project/TestCharts/test2.yaml"],
+	"outputPath": "Project/Output"
 }

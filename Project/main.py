@@ -19,6 +19,7 @@ def main():
     output_handler = OutputHandler()
 
     config = config_handler.get_config()
+    print(config)
 
     chart_dict = parser.get_chart_dict(config)
     policy_dict = parser.get_policy_dict(config)
