@@ -1,3 +1,6 @@
+from os import sys, path
+sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
+
 from Project.Modules.ConfigHandler.config_handler import ConfigHandler
 from Project.Modules.OutputHandler.output_handler import OutputHandler
 from Project.Modules.Parser.parser import Parser
