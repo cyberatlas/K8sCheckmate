@@ -58,5 +58,5 @@ Team Member Contribution Weekly
 - Alex  
 - John will continue to finalize the code and work on the poster. Also will start preparing for the presentation 
 - Jacob continue to write tests and make sure we have full testing coverage. Prep for presentation.
-- Sean 
+- Sean will continue to work on the logic and ensure that the product is tested by the client to ensure satisfaction
 - Daniel will continue to stay up-to-date on changes in 492's schedule due to circumstances and keep the team aware of them as well.  In addition, will also modify the verification code to work as the rest of the project is produced, and work towards the final presentation and poster.
