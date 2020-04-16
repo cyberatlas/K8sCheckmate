@@ -23,8 +23,8 @@ class OutputHandler():
             # Check with Sean if this is right
             self.__errorHandler.path_does_not_exist("Output directory")
 
-    def output_to_terminal(self, policy_dict, verify_dict, elapsed_time):
-        print('Finished parsing security policy in {0} seconds'.format(elapsed_time))
+    def output_to_terminal(self, policy_dict, verify_dict, elapsed_time, file_name):
+        print('Finished parsing \"{0}\" with security policy in {1} seconds'.format(file_name, elapsed_time))
         for k, v in policy_dict.items():
             if verify_dict.get(k):
                 #failed
@@ -49,7 +49,7 @@ class OutputHandler():
                       self.__end)
 
 
-    def log_to_file(self, policy_dict, verify_dict, elapsed_time):
+    def log_to_file(self, policy_dict, verify_dict, elapsed_time, file_ame):
         if self.__output_directory is None:
             # Handle error
             self.__errorHandler.path_does_not_exist("Output Directory")
@@ -58,7 +58,7 @@ class OutputHandler():
         timestamp = str(datetime.datetime.now()).split('.')[0].replace(' ', '_').replace(':', '_')
         file_name = path.join(self.__output_directory, 'k8scheckmate_{0}.txt'.format(timestamp))
         file = open(file_name, 'a+')
-        file.write('Finished parsing security policy in {0} seconds\n'.format(elapsed_time))
+        file.write('Finished parsing \"{0}\" with security policy in {1} seconds\n'.format(file_name, elapsed_time))
         for k,v in policy_dict.items():
             if verify_dict.get(k):
                 #failed

@@ -10,6 +10,7 @@ class ValueVerifier():
     #	Values and Policies dicts are parsed in a not-stupid way and actually holds Ints and the like and not just strings
     #	Ports have the key "port"
     def check(self, values_dict, policy_dict):
+        self.__failing_dict = {}
         # Get a list of used ports
         portList = self.port_search(values_dict)
 
