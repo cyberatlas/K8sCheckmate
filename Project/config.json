@@ -1,6 +1,6 @@
 {
-	"chartPath": "C:\\Users\\Sean\\Desktop\\Chart.yaml",
-	"policyPath": "C:\\Users\\Sean\\Desktop\\policy.yaml",
-	"valuesPath": ["C:\\Users\\Sean\\Desktop\\values.yaml", "C:\\Users\\Sean\\Desktop\\values_two.yaml"],
-	"outputPath": "C:\\Users\\Sean\\Desktop"
+	"chartPath": "C:\\Users\\jackc\\492\\Paths\\chart.yaml",
+	"policyPath": "C:\\Users\\jackc\\492\\Paths\\policy.yaml",
+	"valuesPath": ["C:\\Users\\jackc\\492\\Paths\\values.yaml", "C:\\Users\\jackc\\492\\Paths\\values_two.yaml"],
+	"outputPath": "C:\\Users\\jackc\\492\\Paths\\output"
 }
