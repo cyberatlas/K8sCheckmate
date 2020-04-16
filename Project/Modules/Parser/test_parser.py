@@ -1,5 +1,7 @@
 import pytest
-# from Project.PolicyParse import policyparse as _pp
+
+from Project.Parser.parser
+#from Project.policyparse import policyparse as _pp
 # import os
 
 # def test_get_max_open_ports_not_found_prints_error():
@@ -28,7 +30,7 @@ import pytest
 
 #     # act
 #     # assert
-#     with pytest.raises(FileNotFoundError): 
+#     with pytest.raises(FileNotFoundError):
 #         assert (_pp.get_policies_dict(filepath))
 
 # def test_get_policy_dict_found_returns_dict():
