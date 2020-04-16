@@ -23,7 +23,7 @@ Team Member Contribution Weekly
 
 
 #### 10 Apr - 16 Apr
-- John and Sean (11 Apr) [8 hours] Worked on the error handling, config handling, and parsing
+- John and Sean (11 Apr) [8 hours] Worked on the error handling, config handling, outputting to file and terminal, and parsing
 - Daniel (12 Apr) [4 hours] - Working on Final Report, Final Presentation, Final Poster
 - John (16 Apr) [4 hours] Worked on cleaning up the code to satisfy Workiva's Requirements
 
