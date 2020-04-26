@@ -240,3 +240,5 @@ pip-selfcheck.json
 .history
 
 # End of https://www.gitignore.io/api/go,python,virtualenv,pycharm+all,visualstudiocode
+
+/bin/*

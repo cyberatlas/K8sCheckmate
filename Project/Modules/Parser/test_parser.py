@@ -1,34 +1,30 @@
 import pytest
 
-from Project.Modules.Parser.parser import Parser
+from parser import Parser
 
+ 
 
-class TestParser():
-    def __init__(self):
-        self.__parser_test = Parser()
+# Fixtures
 
-    def test_load_chart_file(self):
-        # arrange
-        file = 'Project/TestCharts/values.yaml'
-        dict1 = {}
+@pytest.fixture
+def parser():
+    return Parser()
 
-        # act
-        dict_check = self.__parser_test.load_chart(file)
+# Helpers
 
-        # assert
-        assert dict1.viewitems() < dict_check.viewitems()
+def test_get_chart_dict(parser):
+    # arrange 
+    dictionary = {
+	    "chartPath": "Project/TestCharts/Chart.yaml",
+    }
 
-    #def test_loadchart_nofile(self):
+    #act 
+    chart = parser.get_chart_dict(dictionary)
+    
+    # assert
+    assert chart != None
+    assert chart['apiVersion'] == 'v1'
 
-# def test_get_max_open_ports_found_returns_value():
-#     # arrange
-#     dictionary = { 'max_open_ports': 4 }
-
-#     # act
-#     out = _pp.get_max_open_ports(dictionary)
-
-#     # assert
-#     assert out == 4
 
 # def test_get_policy_dict_not_found_returns_error():
 #     # arrange
