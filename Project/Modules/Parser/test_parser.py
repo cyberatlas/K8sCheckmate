@@ -1,6 +1,6 @@
 import pytest
 
-from parser import Parser
+from Project.Modules.Parser.parser import Parser
 
  
 
