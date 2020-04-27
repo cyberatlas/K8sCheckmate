@@ -1,6 +1,7 @@
 from setuptools import setup
 
 setup(
+    name='K8sCheckmate',
     packages=[
       'Project',
       'Project.Modules',
@@ -10,8 +11,11 @@ setup(
       'Project.Modules.Parser',
       'Project.Modules.ValueVerifier',
       ],
+    python_requires='>=3.7.*',
     include_package_data=True,
-    install_requires=[],
+    install_requires=[
+        'pyyaml',
+    ],
     setup_requires=[
         'pytest-runner',
     ],

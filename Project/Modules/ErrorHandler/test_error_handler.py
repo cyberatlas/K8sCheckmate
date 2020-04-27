@@ -1,6 +1,43 @@
-# import pytest
-# from Project.PolicyParse import policyparse as _pp
-# import os
+import pytest
+
+from Project.Modules.ErrorHandler.error_handler import ErrorHandler
+
+
+# Fixtures
+
+@pytest.fixture
+def errorhandler():
+    return ErrorHandler()
+
+
+# Helpers
+
+def test_file_not_found(capsys, errorhandler):
+    # arrange
+    path = '/does_not_exist.json'
+    
+    # act
+    with pytest.raises(SystemExit):
+        errorhandler.file_not_found(path)
+    out, err = capsys.readouterr()
+    
+    # assert
+    assert out == path + "  file could not be found\n"
+
+
+# def test_path_does_not_exist(capsys, errorhandler):
+#     # arrange
+#     parameter = 'Project/Modules/DoesNotExist/'
+
+#     # act
+#     with pytest.raises():
+#         errorhandler.path_does_not_exist(parameter)
+#     out, err = capsys.readouterr()
+    
+    
+#     # assert
+#     assert out == "Please provide a path for " + parameter
+
 
 # def test_get_max_open_ports_not_found_prints_error():
 #     # arrange

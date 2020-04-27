@@ -1,8 +1,27 @@
 # K8sCheckmate
 
 # Getting started:
-Install Python 3.7
-Install pyenv and virtualenv 
+Once K8sCheckmate directory is installed, it is recommended to install pyenv if using MacOS or Linux\
+- Mac
+```brew install pyenv```
+- Linux 
+```curl https://pyenv.run | bash```
+
+Follow instructions on 
+https://github.com/pyenv/pyenv/blob/master/README.md#installation
+
+Go to the K8sCheckmate directory
+If using pyenv set the current directory to python 3.7 or higher with 
+```$ pyenv local 3.8.2```
+
+Now install all other dependencies for all systems.
+```$ pip install K8sCheckmate``
+
+
+
+# Testing:
+To run the all tests run 
+```python setup.py test```
 
 - [] Add the instructions for pyenv - **Alex**
 - [] Make a requirements.txt

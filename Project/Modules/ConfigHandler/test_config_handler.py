@@ -1,45 +1,25 @@
 import pytest
-# from Project.PolicyParse import policyparse as _pp
-# import os
 
-# def test_get_max_open_ports_not_found_prints_error():
-#     # arrange
-#     dictionary = {}
+from Project.Modules.ConfigHandler.config_handler import ConfigHandler
 
-#     # act
-#     out = _pp.get_max_open_ports(dictionary)
 
-#     # assert
-#     assert out == -1
+# Fixtures 
 
-# def test_get_max_open_ports_found_returns_value():
-#     # arrange
-#     dictionary = { 'max_open_ports': 4 }
+@pytest.fixture
+def confighandler():
+    return ConfigHandler()
 
-#     # act
-#     out = _pp.get_max_open_ports(dictionary)
 
-#     # assert
-#     assert out == 4
+# Helpers
 
-# def test_get_policy_dict_not_found_returns_error():
-#     # arrange
-#     filepath = ''
+def test_get_config(confighandler):
+    # arrange
+    
+    # act
+    conf = confighandler.get_config()
 
-#     # act
-#     # assert
-#     with pytest.raises(FileNotFoundError): 
-#         assert (_pp.get_policies_dict(filepath))
-
-# def test_get_policy_dict_found_returns_dict():
-#     # arrange
-#     filepath = 'Project/TestCharts/hello-world/Chart.yaml'
-
-#     # act
-#     out = _pp.get_policies_dict(filepath)
-
-#     # assert
-#     assert type(out) is dict
-#     assert out.get('name') == 'hello-world'
-#     assert out.get('version') == '0.1.0'
-
+    # assert
+    assert conf['chartPath'] == 'Project/TestCharts/Chart.yaml'
+    assert conf['policyPath'] == 'Project/TestCharts/policy.yaml'
+    assert conf['valuesPath'] == ["Project/TestCharts/test1.yaml", "Project/TestCharts/test2.yaml"]
+    assert conf['outputPath'] == 'Project/Output'
