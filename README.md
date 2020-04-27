@@ -21,8 +21,8 @@ Now install all other dependencies for all systems.
 In K8sCheckmate directory you can run the project by using
 Mac:
 ```$ python Project/main.py```
-Windows: 
-```$ ```
+Windows (in powershell):
+```$ python .\Project\main.py | Out-Host ```
 
 
 # Testing:
