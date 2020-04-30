@@ -15,7 +15,9 @@ If using pyenv set the current directory to python 3.7 or higher with
 ```$ pyenv local 3.8.2```
 
 Now install all other dependencies for all systems.
-```$ pip install K8sCheckmate``
+```$ pip install K8sCheckmate```
+If this doesn't work you may need to do 
+```$ pip install setuptools```
 
 # Demo
 In K8sCheckmate directory you can run the project by using
@@ -26,7 +28,8 @@ Windows:
 
 
 # Testing:
-To run the all tests run 
+To run the all tests, in K8sCheckmate run
+```$ pytest```
 
 
 - [] Add the instructions for pyenv - **Alex**

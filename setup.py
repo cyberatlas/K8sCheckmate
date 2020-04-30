@@ -2,8 +2,10 @@ from setuptools import setup
 
 setup(
     name='K8sCheckmate',
+    version='1.1.0',
     packages=[
       'Project',
+      'Project.Models',
       'Project.Modules',
       'Project.Modules.ConfigHandler',
       'Project.Modules.ErrorHandler',
@@ -11,7 +13,7 @@ setup(
       'Project.Modules.Parser',
       'Project.Modules.ValueVerifier',
       ],
-    python_requires='>=3.7.*',
+    python_requires='>=3.7',
     include_package_data=True,
     install_requires=[
         'pyyaml',

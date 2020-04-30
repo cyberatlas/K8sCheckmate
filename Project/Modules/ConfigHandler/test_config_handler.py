@@ -23,3 +23,7 @@ def test_get_config(confighandler):
     assert conf['policyPath'] == 'Project/TestCharts/policy.yaml'
     assert conf['valuesPath'] == ["Project/TestCharts/test1.yaml", "Project/TestCharts/test2.yaml"]
     assert conf['outputPath'] == 'Project/Output'
+
+# def test(confighandler):
+#     assert 'true' == 'true'
+

@@ -1,45 +1,90 @@
-# import pytest
-# from Project.PolicyParse import policyparse as _pp
-# import os
+import pytest
 
-# def test_get_max_open_ports_not_found_prints_error():
-#     # arrange
-#     dictionary = {}
+# from Project.Models.error_type import ErrorType
+from Project.Modules.ValueVerifier.value_verifier import ValueVerifier
 
+# Fixtures
+
+@pytest.fixture
+def valueverifier():
+    return ValueVerifier()
+
+
+"""
+This testing is based off of the values that the user has setup 
+and may not work once a user has added or removed thier own checks.
+Also this will not test any new checks a user sets up. 
+(but for code coverage we will be adding this just for completeness of testing)
+"""
+# Helpers
+
+def test_port_search(valueverifier):
+    # arrange 
+    values_dict = {
+        "port": "80",
+        "image": {"repository":"nginx","tag": "stable"}
+    }
+    # act
+    ports = valueverifier.port_search(values_dict)
+    # assert
+    assert ports == ['80']
+
+
+def test_port_search_no_ports(valueverifier):
+    # arrange 
+    values_dict = {
+        "port": "",
+        "image": {"repository":"nginx","tag": "stable"}
+    }
+    # act
+    ports = valueverifier.port_search(values_dict)
+    # assert
+    assert ports == ['']
+
+
+def test_image_search(valueverifier):
+    # arrange 
+    values_dict = {
+        "port": "80",
+        "image": {"repository":"nginx","tag": "stable"}
+    }
+    # act
+    images = valueverifier.image_search(values_dict)
+    # assert
+    assert images == ['nginx']
+
+
+def test_port_search_no_images(valueverifier):
+    # arrange 
+    values_dict = {
+        "port": "",
+        "image": ""
+    }
+    # act
+    images = valueverifier.port_search(values_dict)
+    # assert
+    assert images == ['']
+
+
+def test_image_search_incorrect_layout(valueverifier):
+    # arrange 
+    values_dict = {
+        "port": "80",
+        "image": "repository"
+    }
+    # act
+    with pytest.raises(TypeError) as err:
+       # obs =  TypeError('AssertionError')
+        valueverifier.image_search(values_dict)
+    exception_raised = err.value
+    expected = 'string indices must be integers'
+    # assert
+    assert str(exception_raised) == expected
+
+# def test_check(valueverifier):
+#     # arrange 
+    
 #     # act
-#     out = _pp.get_max_open_ports(dictionary)
 
 #     # assert
-#     assert out == -1
-
-# def test_get_max_open_ports_found_returns_value():
-#     # arrange
-#     dictionary = { 'max_open_ports': 4 }
-
-#     # act
-#     out = _pp.get_max_open_ports(dictionary)
-
-#     # assert
-#     assert out == 4
-
-# def test_get_policy_dict_not_found_returns_error():
-#     # arrange
-#     filepath = ''
-
-#     # act
-#     # assert
-#     with pytest.raises(FileNotFoundError): 
-#         assert (_pp.get_policies_dict(filepath))
-
-# def test_get_policy_dict_found_returns_dict():
-#     # arrange
-#     filepath = 'Project/TestCharts/hello-world/Chart.yaml'
-
-#     # act
-#     out = _pp.get_policies_dict(filepath)
-
-#     # assert
-#     assert type(out) is dict
-#     assert out.get('name') == 'hello-world'
-#     assert out.get('version') == '0.1.0'
-
+#     assert 'true' == 'true'
