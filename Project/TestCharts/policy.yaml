@@ -1,5 +1,6 @@
 MAX_OPEN_PORTS: 1
 BANNED_PORTS: [80,81,82]
 NO_ROOT: true
-BANNED_IMAGES: [bninedge]
+BANNED_IMAGES: [bninedge, nginx]
 BANNED_USERS: [1081,91,1000]
+ALLOWED_IMAGES: [bninedge, alpine]

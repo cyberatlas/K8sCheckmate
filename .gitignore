@@ -239,6 +239,8 @@ pip-selfcheck.json
 # Ignore all local history of files
 .history
 
+# For Macs
+.DS_Store
+
 # End of https://www.gitignore.io/api/go,python,virtualenv,pycharm+all,visualstudiocode
 
-/bin/*

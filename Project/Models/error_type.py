@@ -15,4 +15,4 @@ class ErrorType(Enum):
     TLS = "TLS",  # Checks to see if transport layer security is used
     REPLICA_COUNT = "REPLICA_COUNT",  # Number of replica counts
     PULL_POLICY = "PULL_POLICY"  # If the pull policy is present or not
-
+    ALLOWED_IMAGES = "ALLOWED_IMAGES"

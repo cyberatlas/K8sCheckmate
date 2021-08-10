@@ -58,6 +58,18 @@ class ValueVerifier():
                             self.__failing_dict[key] = []
                         self.__failing_dict[key].append(image)
 
+            # Check Outside Images - Boolean
+            # Banned Images - list of Images
+            elif key == ErrorType.ALLOWED_IMAGES.name:
+                for image in imageList:
+                    print(f'image : {image} imglist:{imageList} policylist: {policy_dict[key]} \n')
+                    # TODO Check the condition for when there is no allowed registries configured - commented line does not work in that cas'
+                    # if image['repository'] not in policy_dict[key] and image['Registry'] not in policy_dict['ALLOWED_REGISTRIES']:
+                    if image['repository'] not in policy_dict[key]:
+                        if key not in self.__failing_dict:
+                            self.__failing_dict[key] = []
+                        self.__failing_dict[key].append(image)
+
         return self.__failing_dict
 
     # The thing is, ideally the Values should be parsed in such a way that these functions are unnecessary, but just in case:
@@ -78,7 +90,8 @@ class ValueVerifier():
         images = []
         for key in values_dict:
             if key == 'image':
-                images.append(values_dict[key]['repository'])
+                # images.append(values_dict[key]['repository'])
+                images.append(values_dict[key])
             elif isinstance(values_dict[key], dict):
                 images.extend(self.image_search(values_dict[key]))
 
