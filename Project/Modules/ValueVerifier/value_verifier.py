@@ -70,6 +70,31 @@ class ValueVerifier():
                             self.__failing_dict[key] = []
                         self.__failing_dict[key].append(image)
 
+                    if 'ALLOWED_REGISTRIES' in policy_dict:
+                        if 'registry' not in image or image['registry'] not in policy_dict['ALLOWED_REGISTRIES']:
+                            if key not in self.__failing_dict:
+                                self.__failing_dict[key] = []
+                            self.__failing_dict[key].append(image)
+
+            #TODO allowed registries logic lumped in with the allowed images- might need to change that
+            # TODO helper function to set the keys and failing dicts?
+            elif key == ErrorType.ALLOWED_REGISTRY_REPO.name:
+                # If the image does not contain a registry nor repo it auto fails the check
+                for image in imageList:
+                    if 'registry' not in image or 'repository' not in image:
+                        if key not in self.__failing_dict:
+                            self.__failing_dict[key] = []
+                            #TODO perhaps clean up the image? like a list? maybe make this more descriptive
+                        self.__failing_dict[key].append(image)
+                    elif [image['registry'], image['repository']] in policy_dict[key]:
+                        print('YEP does the list search. this passing')
+                        continue
+                    else:
+                        if key not in self.__failing_dict:
+                            self.__failing_dict[key] = []
+                        self.__failing_dict[key].append(image)
+                        # print('fail! sad!')
+
         return self.__failing_dict
 
     # The thing is, ideally the Values should be parsed in such a way that these functions are unnecessary, but just in case:

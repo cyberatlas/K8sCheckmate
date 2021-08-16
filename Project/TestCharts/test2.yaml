@@ -6,8 +6,9 @@ replicaCount: 1
 
 
 image:
-  repository: bninedge
+  repository: bniedge
   tag: stable
+  registry: docker.io
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
