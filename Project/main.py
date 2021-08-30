@@ -8,7 +8,6 @@ from Project.Modules.ValueVerifier.value_verifier import ValueVerifier
 import time
 
 
-
 def main():
     start = time.time()
 
@@ -34,6 +33,7 @@ def main():
         if config['outputPath'] != '':
             output_handler.set_output_directory(config['outputPath'])
             output_handler.log_to_file(policy_dict, verify_dict, end - start, config['valuesPath'][idx])
+
 
 if __name__ == "__main__":
     main()

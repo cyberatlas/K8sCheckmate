@@ -24,78 +24,98 @@ class ValueVerifier():
             # Maximum Number of Ports - int
             if key == ErrorType.MAX_OPEN_PORTS.name:
                 if len(portList) > policy_dict[key]:
-                    self.__failing_dict[key] = len(portList)
+                    self.add_issue(key, len(portList))
+                    # self.__failing_dict[key] = len(portList)
 
             # Banned Ports - list of ints
             elif key == ErrorType.BANNED_PORTS.name:
                 for port in policy_dict[key]:
                     if port in portList:
-                        if key not in self.__failing_dict:
-                            self.__failing_dict[key] = []
-                        self.__failing_dict[key].append(port)
+                        self.add_issue(key, port)
+                        # if key not in self.__failing_dict:
+                        #     self.__failing_dict[key] = []
+                        # self.__failing_dict[key].append(port)
 
             # No Root - Boolean
             elif key == ErrorType.NO_ROOT.name:
                 if 'securityContext' in values_dict:
                     if 'runAsNonRoot' in values_dict['securityContext']:
                         if values_dict['securityContext']['runAsNonRoot'] != policy_dict[key]:
-                            self.__failing_dict[key] = str(values_dict['securityContext']['runAsNonRoot'])
+                            self.add_issue(key, values_dict['securityContext']['runAsNonRoot'])
+                            # self.__failing_dict[key] = str(values_dict['securityContext']['runAsNonRoot'])
 
             elif key == ErrorType.BANNED_USERS.name:
                 if 'securityContext' in values_dict:
                     if 'runAsUser' in values_dict['securityContext']:
                         if values_dict['securityContext']['runAsUser'] in policy_dict[key]:
-                            if key not in self.__failing_dict:
-                                self.__failing_dict[key] = []
-                            self.__failing_dict[key].append(values_dict['securityContext']['runAsUser'])
+                            self.add_issue(key, values_dict['securityContext']['runAsUser'])
+                            # if key not in self.__failing_dict:
+                            #     self.__failing_dict[key] = []
+                            # self.__failing_dict[key].append(values_dict['securityContext']['runAsUser'])
 
             # Check Outside Images - Boolean
             # Banned Images - list of Images
             elif key == ErrorType.BANNED_IMAGES.name:
                 for image in imageList:
-                    if image in policy_dict[key]:
-                        if key not in self.__failing_dict:
-                            self.__failing_dict[key] = []
-                        self.__failing_dict[key].append(image)
+                    self.add_issue(key, image)
+                    # if image in policy_dict[key]:
+                    #     if key not in self.__failing_dict:
+                    #         self.__failing_dict[key] = []
+                    #     self.__failing_dict[key].append(image)
 
             # Check Outside Images - Boolean
             # Banned Images - list of Images
             elif key == ErrorType.ALLOWED_IMAGES.name:
                 for image in imageList:
-                    print(f'image : {image} imglist:{imageList} policylist: {policy_dict[key]} \n')
+                    # print(f'image : {image} imglist:{imageList} policylist: {policy_dict[key]} \n')
                     # TODO Check the condition for when there is no allowed registries configured - commented line does not work in that cas'
                     # if image['repository'] not in policy_dict[key] and image['Registry'] not in policy_dict['ALLOWED_REGISTRIES']:
-                    if image['repository'] not in policy_dict[key]:
-                        if key not in self.__failing_dict:
-                            self.__failing_dict[key] = []
-                        self.__failing_dict[key].append(image)
+                    # if image['repository'] not in policy_dict[key]:
+                    if image['repo'] not in policy_dict[key]:
+                            self.add_issue(key, image)
+                        # if key not in self.__failing_dict:
+                        #     self.__failing_dict[key] = []
+                        # self.__failing_dict[key].append(image)
 
                     if 'ALLOWED_REGISTRIES' in policy_dict:
                         if 'registry' not in image or image['registry'] not in policy_dict['ALLOWED_REGISTRIES']:
-                            if key not in self.__failing_dict:
-                                self.__failing_dict[key] = []
-                            self.__failing_dict[key].append(image)
+                            self.add_issue('ALLOWED_REGISTRIES', image)
+                            # if key not in self.__failing_dict:
+                            #     self.__failing_dict[key] = []
+                            # self.__failing_dict[key].append(image)
 
-            #TODO allowed registries logic lumped in with the allowed images- might need to change that
+            # TODO allowed registries logic lumped in with the allowed images- might need to change that
             # TODO helper function to set the keys and failing dicts?
             elif key == ErrorType.ALLOWED_REGISTRY_REPO.name:
                 # If the image does not contain a registry nor repo it auto fails the check
                 for image in imageList:
-                    if 'registry' not in image or 'repository' not in image:
-                        if key not in self.__failing_dict:
-                            self.__failing_dict[key] = []
-                            #TODO perhaps clean up the image? like a list? maybe make this more descriptive
+                    # if 'registry' not in image or 'repository' not in image:
+                    if 'registry' not in image or 'repo' not in image:
+                        self.add_issue(key, image)
+                        # if key not in self.__failing_dict:
+                        #     self.__failing_dict[key] = []
+                            # TODO perhaps clean up the image? like a list? maybe make this more descriptive
                         self.__failing_dict[key].append(image)
-                    elif [image['registry'], image['repository']] in policy_dict[key]:
-                        print('YEP does the list search. this passing')
+
+                    # elif [image['registry'], image['repository']] in policy_dict[key]:
+                    elif [image['registry'], image['repo']] in policy_dict[key]:
+                        # print('YEP does the list search. this passing')
                         continue
                     else:
-                        if key not in self.__failing_dict:
-                            self.__failing_dict[key] = []
-                        self.__failing_dict[key].append(image)
+                        self.add_issue(key, image)
+                        # if key not in self.__failing_dict:
+                        #     self.__failing_dict[key] = []
+                        # self.__failing_dict[key].append(image)
                         # print('fail! sad!')
 
         return self.__failing_dict
+
+    # Adds the failing checks to the failing dict
+    def add_issue(self, key, val):
+        # Add the policy to the dict of failed checks if not in there already
+        if key not in self.__failing_dict:
+            self.__failing_dict[key] = []
+        self.__failing_dict[key].append(val)
 
     # The thing is, ideally the Values should be parsed in such a way that these functions are unnecessary, but just in case:
     # Returns a list of ints representing ports used

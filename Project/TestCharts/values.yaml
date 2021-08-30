@@ -5,7 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+#  repository: nginx
+  repo: nginx
   tag: stable
   pullPolicy: IfNotPresent
 

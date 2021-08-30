@@ -3,6 +3,6 @@ BANNED_PORTS: [80,81,82]
 NO_ROOT: true
 BANNED_IMAGES: [bninedge, nginx]
 BANNED_USERS: [1081,91,1000]
-ALLOWED_IMAGES: [bninedge, alpine]
+ALLOWED_IMAGES: [bniedge, alpine]
 ALLOWED_REGISTRIES: test
 ALLOWED_REGISTRY_REPO: [[docker.io, bniedge], [company.com, alpine]]
