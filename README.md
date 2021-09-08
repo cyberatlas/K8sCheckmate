@@ -18,6 +18,7 @@ Now install all other dependencies for all systems.
 ```$ pip install K8sCheckmate```
 If this doesn't work you may need to do 
 ```$ pip install setuptools```
+> You may need to `pip uninstall K8sCheckmate` and reinstall when making changes 
 
 # Demo
 In K8sCheckmate directory you can run the project by using

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='K8sCheckmate',
-    version='1.1.0',
+    version='1.2.0',
     packages=[
       'Project',
       'Project.Models',
